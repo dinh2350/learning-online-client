@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import ListTrendingContainer from "./components/listTrending/ListTrendingContainer";
 import "./Home.scss";
 export default function Home(props) {
   useEffect(
@@ -9,5 +10,9 @@ export default function Home(props) {
     },
     [props]
   );
-  return <div className="home">Page Home</div>;
+  return (
+    <div className="home">
+      <ListTrendingContainer />
+    </div>
+  );
 }
