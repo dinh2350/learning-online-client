@@ -9,13 +9,13 @@ export default function ListTrending(props) {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToShow: 3,
+    slidesToScroll: 3
   };
 
   useEffect(
     function() {
-      props.actGetCourseListByCatalogAPI();
+      props.actGetCourseListByCatalogAPI("BackEnd");
     },
     [props]
   );
@@ -23,7 +23,7 @@ export default function ListTrending(props) {
   function renderCourseList() {
     if (props.courseListByCatalog) {
       return props.courseListByCatalog.map((course, index) => {
-        return <CourseContainer />;
+        return <CourseContainer course={course} key={index} />;
       });
     }
   }
@@ -35,28 +35,13 @@ export default function ListTrending(props) {
           <h2 className="list-trending__title">
             Trending Data Analysis Courses See all
           </h2>
-          <a href="/"> see all </a>
+          <a href="/" className="list-trending__see-all">
+            {" "}
+            see all{" "}
+          </a>
         </div>
         <div className="list-trending__body">
           <CarouselTrending {...settings}>
-            {/* <div>
-              <h3>1</h3>
-            </div>
-            <div>
-              <h3>2</h3>
-            </div>
-            <div>
-              <h3>3</h3>
-            </div>
-            <div>
-              <h3>4</h3>
-            </div>
-            <div>
-              <h3>5</h3>
-            </div>
-            <div>
-              <h3>6</h3>
-            </div> */}
             {renderCourseList()}
           </CarouselTrending>
         </div>
