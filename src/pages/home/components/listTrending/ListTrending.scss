@@ -1,19 +1,42 @@
 .list-trending {
   .list-trending__wrapper {
+    width: 90%;
+    margin: 0px auto;
     .list-trending__header {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 15px;
       h2.list-trending__title {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        font-weight: 600;
         color: rgba(0, 0, 0, 0.6);
-        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 20px;
       }
-      p.list-trending__see-all {
-        color: #4034b0;
+      a.list-trending__see-all {
+        font-weight: 600;
+        background-color: transparent;
+        border: 0;
+        color: #0073b1;
+        margin: 0;
+        padding: 0;
+        font-size: 1.6rem;
+        vertical-align: baseline;
+        background: transparent;
+        margin-right: 70px;
         &:hover {
+          text-decoration: underline;
         }
       }
     }
     .list-trending__body {
+      // overflow: hidden;
+      .slick-arrow {
+        &::before {
+          color: black;
+        }
+      }
     }
   }
 }
