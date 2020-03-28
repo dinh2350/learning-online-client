@@ -10,8 +10,7 @@ export default function Course(props) {
             <img src={course.hinhAnh} alt="gai xinh" />
           </div>
           <h3 className="course__name">{course.tenKhoaHoc}</h3>
-          <p className="course__description">{course.moTa}</p>
-          <span className="course__view">{course.luotXem} view</span>
+          <span className="course__view">{course.luotXem} viewers </span>
         </a>
       </div>
     </section>

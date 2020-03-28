@@ -6,11 +6,11 @@ import CarouselTrending from "react-slick";
 import CourseContainer from "./components/course/CourseContainer";
 export default function ListTrending(props) {
   const settings = {
-    dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3
+    items: 4,
+    slidesToShow: 4,
+    slidesToScroll: 4
   };
 
   useEffect(
@@ -36,8 +36,7 @@ export default function ListTrending(props) {
             Trending Data Analysis Courses See all
           </h2>
           <a href="/" className="list-trending__see-all">
-            {" "}
-            see all{" "}
+            See all
           </a>
         </div>
         <div className="list-trending__body">
