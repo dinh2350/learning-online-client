@@ -10,9 +10,13 @@ export default function Home(props) {
     },
     [props]
   );
+
   return (
     <div className="home">
-      <ListTrendingContainer />
+      <ListTrendingContainer
+        title="Trending Data Analysis Courses See all"
+        catalogCode="BackEnd"
+      />
     </div>
   );
 }
