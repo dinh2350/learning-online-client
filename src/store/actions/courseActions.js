@@ -1,13 +1,9 @@
-import Axios from "axios";
 import * as constantsAct from "../constants/actionsTypes";
+import api from "./../../services/api";
 export const actGetCourseListAPI = courseName => {
+  const data = { tenKhoaHoc: courseName };
   return dispatch => {
-    Axios({
-      method: "GET",
-      url:
-        "http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01",
-      data: { tenKhoaHoc: courseName }
-    })
+    api("LayDanhSachKhoaHoc?MaNhom=GP01", "GET", data)
       .then(result => {
         dispatch({
           type: constantsAct.GET_COURSE_LIST,
@@ -21,19 +17,33 @@ export const actGetCourseListAPI = courseName => {
 };
 
 export const actGetCatalogListAPI = catalogName => {
+  const data = { tenDanhMuc: catalogName };
   return dispatch => {
-    fetch(
-      "http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc",
-      {
-        method: "GET",
-        data: { tenDanhMuc: catalogName }
-      }
-    )
-      .then(response => response.json())
+    api("LayDanhMucKhoaHoc", "GET", data)
       .then(result => {
         dispatch({
           type: constantsAct.GET_CATALOG_LIST,
-          catalogList: result
+          catalogList: result.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+};
+
+export const actGetCourseListByCatalogAPI = catalogCode => {
+  const data = { maDanhMuc: catalogCode };
+  return dispatch => {
+    api(
+      `LayKhoaHocTheoDanhMuc?maDanhMuc=${catalogCode}&MaNhom=GP01`,
+      "GET",
+      data
+    )
+      .then(result => {
+        dispatch({
+          type: constantsAct.GET_COURSE_LIST_BY_CATALOG,
+          courseListByCatalog: result.data
         });
       })
       .catch(err => {

@@ -1,8 +1,6 @@
 import * as constantsAct from "../constants/actionsTypes";
 
-const initialState = {
-  test: "test"
-};
+const initialState = {};
 
 const courseReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -11,6 +9,9 @@ const courseReducer = (state = initialState, action) => {
       break;
     case constantsAct.GET_CATALOG_LIST:
       state.catalogList = action.catalogList;
+      break;
+    case constantsAct.GET_COURSE_LIST_BY_CATALOG:
+      state.courseListByCatalog = action.courseListByCatalog;
       break;
     default:
       break;

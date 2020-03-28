@@ -1,0 +1,19 @@
+.list-trending {
+  .list-trending__wrapper {
+    .list-trending__header {
+      display: flex;
+      justify-content: space-between;
+      h2.list-trending__title {
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: 400;
+      }
+      p.list-trending__see-all {
+        color: #4034b0;
+        &:hover {
+        }
+      }
+    }
+    .list-trending__body {
+    }
+  }
+}
