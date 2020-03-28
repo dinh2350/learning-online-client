@@ -8,14 +8,43 @@ export default function ListTrending(props) {
   const settings = {
     infinite: false,
     speed: 500,
-    items: 4,
     slidesToShow: 4,
-    slidesToScroll: 4
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          infinite: false,
+          speed: 500,
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          infinite: false,
+          speed: 500,
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          infinite: false,
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
-
+  const { title } = props;
   useEffect(
     function() {
-      props.actGetCourseListByCatalogAPI("BackEnd");
+      const { actGetCourseListByCatalogAPI, catalogCode } = props;
+      actGetCourseListByCatalogAPI(catalogCode);
     },
     [props]
   );
@@ -32,9 +61,7 @@ export default function ListTrending(props) {
     <section className="list-trending">
       <div className="list-trending__wrapper">
         <div className="list-trending__header">
-          <h2 className="list-trending__title">
-            Trending Data Analysis Courses See all
-          </h2>
+          <h2 className="list-trending__title">{title}</h2>
           <a href="/" className="list-trending__see-all">
             See all
           </a>

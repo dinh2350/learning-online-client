@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HeaderContainer from "./components/header/HeaderContainer";
 import "./assets/styles/Base/Reset.scss";
+import "./App.scss";
 import RoutesList from "./routes";
 export default function App() {
   function showMenu() {
@@ -17,10 +18,12 @@ export default function App() {
   }
   return (
     <Router>
-      <div>
-        <HeaderContainer />
-        <Switch>{showMenu()}</Switch>
-      </div>
+      <HeaderContainer />
+      <main className="main">
+        <div className="main__wrapper">
+          <Switch>{showMenu()}</Switch>
+        </div>
+      </main>
     </Router>
   );
 }
