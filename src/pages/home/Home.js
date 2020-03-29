@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import ListTrendingContainer from "./components/listTrending/ListTrendingContainer";
+import ListTrendingContainer from "./listTrending/ListTrendingContainer";
 import "./Home.scss";
 export default function Home(props) {
   useEffect(
