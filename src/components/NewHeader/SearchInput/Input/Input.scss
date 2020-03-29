@@ -1,0 +1,14 @@
+@import "../../../../assets/styles/Helpers/variable.scss";
+.Input {
+  width: 100%;
+  border-right: 1.5px solid $color-gray-2;
+  input {
+    outline: none;
+    width: 100%;
+    background-color: $color-gray-0;
+    border: none;
+    height: 100%;
+    padding-top: 13.5px;
+    padding-bottom: 13.5px;
+  }
+}

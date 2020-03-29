@@ -1,0 +1,22 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+
+.Logo {
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    img {
+      width: 35px;
+      height: 35px;
+      border-radius: 5px;
+    }
+    p {
+      margin: 0;
+      margin-left: 0px;
+      color: $color-purple-0;
+      font-weight: 650;
+      font-size: 2rem;
+      text-shadow: 1px 4px 3px rgba(199, 209, 216, 0.4);
+    }
+  }
+}

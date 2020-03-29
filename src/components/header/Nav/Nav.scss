@@ -1,0 +1,28 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+.Nav {
+  width: 50%;
+  ul {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      a {
+        text-decoration: none;
+        color: $color-black-0;
+        font-size: 1.1rem;
+      }
+      &:hover {
+        a {
+          color: $color-green-0;
+        }
+      }
+    }
+    li:nth-child(1) {
+      a {
+        color: $color-green-0;
+      }
+    }
+  }
+}

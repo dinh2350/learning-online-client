@@ -1,0 +1,19 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+.BtnSign {
+  button {
+    outline: none;
+    cursor: pointer;
+    border: 1px solid $color-blue-0;
+    background-color: white;
+    padding: 11px 25px;
+    border-radius: 3px;
+    color: $color-blue-0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    &:hover {
+      background-color: $color-blue-1;
+      border: 2px solid $color-blue-0;
+      padding: 10px 24px;
+    }
+  }
+}

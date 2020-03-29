@@ -1,0 +1,24 @@
+.Dropdown {
+  position: relative;
+
+  .Dropdown__switch {
+    display: flex;
+    align-items: center;
+    img {
+      padding: 5px 0 0 5px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+  .Dropdown__list {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-color: blue;
+    .Dropdown__list__item {
+      ul {
+        display: block;
+      }
+    }
+  }
+}

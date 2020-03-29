@@ -1,0 +1,17 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+.BtnStart {
+  button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 12px 15px;
+    font-size: 1rem;
+    background-color: white;
+    font-weight: 600;
+    color: $color-gray-1;
+    &:hover {
+      background-color: $color-gray-4;
+      border-radius: 3px;
+    }
+  }
+}

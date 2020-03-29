@@ -1,0 +1,68 @@
+@import "../../../../assets/styles/Helpers/variable.scss";
+.Switch {
+  position: relative;
+
+  button {
+    outline: none;
+    cursor: pointer;
+    background-color: $color-gray-0;
+    border: 0px none white;
+    border-right: 1.5px solid $color-gray-2;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border-radius: 3px 0 0 3px;
+    img {
+      width: 10px;
+      height: 10px;
+      margin-left: 8px;
+    }
+    span {
+      font-size: 1rem;
+      font-weight: 600;
+      color: $color-gray-1;
+    }
+  }
+  .contentSwitch {
+    background-color: white;
+    border: 0.5px solid $color-gray-1;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    min-width: 140px;
+
+    border-radius: 4px;
+    box-shadow: 1px 2px 11px $color-gray-1;
+    h5 {
+      margin-bottom: 5px;
+      margin-left: 20px;
+    }
+    ul {
+      padding: 0;
+      margin: 2px 0;
+      .contentSwitch__item-choose {
+        border: 0.5px solid $color-blue-1;
+        border-left: 1px solid $color-blue-0;
+        color: $color-blue-0;
+        font-weight: 600;
+      }
+      li {
+        cursor: pointer;
+        list-style: none;
+        margin: 0px 0;
+
+        .contentSwitch__item {
+          margin-left: 20px;
+          padding: 10px 0;
+          font-weight: 600;
+          color: $color-gray-1;
+        }
+        &:hover {
+          background-color: $color-gray-5;
+        }
+      }
+    }
+  }
+}
