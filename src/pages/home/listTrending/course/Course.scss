@@ -1,0 +1,41 @@
+@import "../../../../assets/styles/Helpers/variable.scss";
+.course {
+  .course__wrapper {
+    padding: 0px 10px;
+    .course__link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      &:hover {
+        h3.course__name {
+          text-decoration: underline;
+        }
+      }
+      .course__image {
+        height: $ci_h;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: $ci_br;
+        }
+      }
+      h3.course__name {
+        font-size: $cn_fs;
+        font-weight: $lt_fw;
+        color: $cn_c;
+        margin-top: 8px;
+        // begin no wrap
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        // end no wrap
+      }
+      span.course__view {
+        font-size: $cv_fs;
+        font-weight: $cv_fw;
+        color: $cv_c;
+        margin-top: 4px;
+      }
+    }
+  }
+}

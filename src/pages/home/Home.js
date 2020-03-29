@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import ListTrendingContainer from "./components/listTrending/ListTrendingContainer";
+import ListTrendingContainer from "./listTrending/ListTrendingContainer";
 import "./Home.scss";
 export default function Home(props) {
   useEffect(
@@ -10,9 +10,13 @@ export default function Home(props) {
     },
     [props]
   );
+
   return (
     <div className="home">
-      <ListTrendingContainer />
+      <ListTrendingContainer
+        title="Trending Data Analysis Courses See all"
+        catalogCode="BackEnd"
+      />
     </div>
   );
 }
