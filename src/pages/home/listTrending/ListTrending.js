@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import "./ListTrending.scss";
-import "../../../../../node_modules/slick-carousel/slick/slick.css";
-import "../../../../../node_modules/slick-carousel/slick/slick-theme.css";
+import "../../../../node_modules/slick-carousel/slick/slick.css";
+import "../../../../node_modules/slick-carousel/slick/slick-theme.css";
 import CarouselTrending from "react-slick";
-import CourseContainer from "./components/course/CourseContainer";
+import CourseContainer from "./course/CourseContainer";
 export default function ListTrending(props) {
   const settings = {
     infinite: false,
