@@ -1,6 +1,6 @@
 import ListTrending from "./ListTrending";
 import { connect } from "react-redux";
-import { actGetCourseListByCatalogAPI } from "./../../../../store/actions/courseActions";
+import { actGetCourseListByCatalogAPI } from "./../../../store/actions/courseActions";
 const mapStateToProps = state => {
   return {
     courseListByCatalog: state.courseReducer.courseListByCatalog
