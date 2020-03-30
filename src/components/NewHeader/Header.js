@@ -7,7 +7,7 @@ import BtnSignContainer from "./BtnSign/BtnSignContainer";
 export default function Header() {
   return (
     <div className="Header">
-      <div className="Header__content">
+      <div className="Header__wrap">
         <LogoContainer />
         <SearchInputContainer />
         <BtnStartContainer />
