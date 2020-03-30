@@ -41,16 +41,14 @@ export default function ListTrending(props) {
     ]
   };
   const { title } = props;
-  useEffect(
-    function() {
-      const { actGetCourseListByCatalogAPI, catalogCode } = props;
-      actGetCourseListByCatalogAPI(catalogCode);
-    },
-    [props]
-  );
+  useEffect(function() {
+    const { actGetCourseListByCatalogAPI, catalogCode } = props;
+    actGetCourseListByCatalogAPI(catalogCode);
+  }, []);
 
   function renderCourseList() {
     if (props.courseListByCatalog) {
+      console.log(1);
       return props.courseListByCatalog.map((course, index) => {
         return <CourseContainer course={course} key={index} />;
       });
