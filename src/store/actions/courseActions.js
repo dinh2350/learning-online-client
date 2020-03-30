@@ -1,9 +1,10 @@
 import * as constantsAct from "../constants/actionsTypes";
 import api from "./../../services/api";
+const groupCode = "GP01";
 export const actGetCourseListAPI = courseName => {
   const data = { tenKhoaHoc: courseName };
   return dispatch => {
-    api("LayDanhSachKhoaHoc?MaNhom=GP01", "GET", data)
+    api(`LayDanhSachKhoaHoc?MaNhom=${groupCode}`, "GET", data)
       .then(result => {
         dispatch({
           type: constantsAct.GET_COURSE_LIST,
@@ -36,7 +37,7 @@ export const actGetCourseListByCatalogAPI = catalogCode => {
   const data = { maDanhMuc: catalogCode };
   return dispatch => {
     api(
-      `LayKhoaHocTheoDanhMuc?maDanhMuc=${catalogCode}&MaNhom=GP01`,
+      `LayKhoaHocTheoDanhMuc?maDanhMuc=${catalogCode}&MaNhom=${groupCode}`,
       "GET",
       data
     )
@@ -44,6 +45,46 @@ export const actGetCourseListByCatalogAPI = catalogCode => {
         dispatch({
           type: constantsAct.GET_COURSE_LIST_BY_CATALOG,
           courseListByCatalog: result.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+};
+
+export const actGetCourseListByPaginationAPI = (courseName, page, pageSize) => {
+  const data = { tenKhoaHoc: courseName };
+  return dispatch => {
+    api(
+      `LayDanhSachKhoaHoc_PhanTrang?page=${page}&pageSize=${pageSize}&MaNhom=${groupCode}`,
+      "GET",
+      data
+    )
+      .then(result => {
+        dispatch({
+          type: constantsAct.GET_COURSE_LIST_BY_PAGINATION,
+          courseListByPagination: result.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+};
+
+export const actGetCourseInformationAPI = (courseName, page, pageSize) => {
+  const data = { tenKhoaHoc: courseName };
+  return dispatch => {
+    api(
+      `LayDanhSachKhoaHoc_PhanTrang?page=${page}&pageSize=${pageSize}&MaNhom=${groupCode}`,
+      "GET",
+      data
+    )
+      .then(result => {
+        dispatch({
+          type: constantsAct.GET_COURSE_LIST_BY_PAGINATION,
+          courseListByPagination: result.data
         });
       })
       .catch(err => {
