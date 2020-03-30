@@ -4,8 +4,8 @@ export default function Home(props) {
   useEffect(
     function() {
       const { actGetCatalogListAPI, actGetCourseListAPI } = props;
-      actGetCatalogListAPI();
-      actGetCourseListAPI();
+      actGetCatalogListAPI("Angular");
+      actGetCourseListAPI("Lập trình Backend");
     },
     [props]
   );
