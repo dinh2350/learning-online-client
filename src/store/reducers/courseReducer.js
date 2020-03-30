@@ -13,6 +13,9 @@ const courseReducer = (state = initialState, action) => {
     case constantsAct.GET_COURSE_LIST_BY_CATALOG:
       state.courseListByCatalog = action.courseListByCatalog;
       break;
+    case constantsAct.GET_COURSE_LIST_BY_PAGINATION:
+      state.courseListByPagination = action.courseListByPagination;
+      break;
     default:
       break;
   }
