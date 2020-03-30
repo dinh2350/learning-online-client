@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import {
   actGetCourseListByPaginationAPI,
   actGetCourseInformationAPI,
-  actGetStudentInformationOfCourseAPI
+  actGetStudentInformationOfCourseAPI,
+  actCreateCourseAPI
 } from "./../../store/actions/courseActions";
 const mapDispatchToProps = dispatch => {
   return {
@@ -19,6 +20,9 @@ const mapDispatchToProps = dispatch => {
     },
     actGetStudentInformationOfCourseAPI: (courseCode = "8957893753") => {
       dispatch(actGetStudentInformationOfCourseAPI(courseCode));
+    },
+    actCreateCourseAPI: course => {
+      dispatch(actCreateCourseAPI(course));
     }
   };
 };
