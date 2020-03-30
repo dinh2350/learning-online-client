@@ -73,18 +73,36 @@ export const actGetCourseListByPaginationAPI = (courseName, page, pageSize) => {
   };
 };
 
-export const actGetCourseInformationAPI = (courseName, page, pageSize) => {
-  const data = { tenKhoaHoc: courseName };
+export const actGetCourseInformationAPI = courseCode => {
+  return dispatch => {
+    api(`LayThongTinKhoaHoc?maKhoaHoc=${courseCode}`, "GET")
+      .then(result => {
+        dispatch({
+          type: constantsAct.GET_COURSE_INFORMATION,
+          courseInformation: result.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+};
+
+export const actGetStudentInformationOfCourseAPI = courseCode => {
+  const headers = {
+    Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWJjMTIzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiR1YiLCJuYmYiOjE1ODU1NzU5MjcsImV4cCI6MTU4NTU3OTUyN30.bSoyDCeLKS8wtrk7Uhm3OfhajaC3M2liA_X1mM0UAyQ`
+  };
   return dispatch => {
     api(
-      `LayDanhSachKhoaHoc_PhanTrang?page=${page}&pageSize=${pageSize}&MaNhom=${groupCode}`,
+      `LayThongTinHocVienKhoaHoc?maKhoaHoc=${courseCode}`,
       "GET",
-      data
+      null,
+      headers
     )
       .then(result => {
         dispatch({
-          type: constantsAct.GET_COURSE_LIST_BY_PAGINATION,
-          courseListByPagination: result.data
+          type: constantsAct.GET_STUDENT_INFORMATION_OF_COURSE,
+          studentInformationOfCourse: result.data
         });
       })
       .catch(err => {
