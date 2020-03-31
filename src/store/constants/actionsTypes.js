@@ -12,3 +12,4 @@ export const LOG_IN = "LOG_IN";
 export const REGISTER_USER = "REGISTER_USER";
 export const GET_USER_LIST = "GET_USER_LIST";
 export const GET_USER_LIST_BY_PAGINATION = "GET_USER_LIST_BY_PAGINATION";
+export const GET_SEARCH_USER = "GET_SEARCH_USER";
