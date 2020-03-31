@@ -31,6 +31,9 @@ const userReducer = (state = initialState, action) => {
     case constantsAct.UPDATE_USER:
       state.updateUser = action.updateUser;
       break;
+    case constantsAct.DELETE_USER:
+      state.deleteUser = action.deleteUser;
+      break;
     default:
       break;
   }
