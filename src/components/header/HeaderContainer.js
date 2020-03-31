@@ -14,7 +14,8 @@ import {
   actGetUserListByPaginationAPI,
   actGetSearchUserAPI,
   actAccountInformationAPI,
-  actAddUserAPI
+  actAddUserAPI,
+  actUpdateUserAPI
 } from "../../store/actions/userActions";
 const mapDispatchToProps = dispatch => {
   return {
@@ -46,7 +47,8 @@ const mapDispatchToProps = dispatch => {
     actGetSearchUserAPI: (keyWork = "") =>
       dispatch(actGetSearchUserAPI(keyWork)),
     actAccountInformationAPI: user => dispatch(actAccountInformationAPI(user)),
-    actAddUserAPI: user => dispatch(actAddUserAPI(user))
+    actAddUserAPI: user => dispatch(actAddUserAPI(user)),
+    actUpdateUserAPI: user => dispatch(actUpdateUserAPI(user))
   };
 };
 export default connect(null, mapDispatchToProps)(Header);

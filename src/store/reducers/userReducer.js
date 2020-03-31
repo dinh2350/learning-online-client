@@ -28,6 +28,9 @@ const userReducer = (state = initialState, action) => {
     case constantsAct.ADD_USER:
       state.addUser = action.addUser;
       break;
+    case constantsAct.UPDATE_USER:
+      state.updateUser = action.updateUser;
+      break;
     default:
       break;
   }
