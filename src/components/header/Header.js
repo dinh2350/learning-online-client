@@ -43,6 +43,7 @@ export default function Header(props) {
       maNhom: "GP01",
       email: "string11@lol.com"
     });
+    props.actDeleteUserAPI("string11");
   }, []);
 
   function handleClick() {

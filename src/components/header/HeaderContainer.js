@@ -15,7 +15,8 @@ import {
   actGetSearchUserAPI,
   actAccountInformationAPI,
   actAddUserAPI,
-  actUpdateUserAPI
+  actUpdateUserAPI,
+  actDeleteUserAPI
 } from "../../store/actions/userActions";
 const mapDispatchToProps = dispatch => {
   return {
@@ -48,7 +49,8 @@ const mapDispatchToProps = dispatch => {
       dispatch(actGetSearchUserAPI(keyWork)),
     actAccountInformationAPI: user => dispatch(actAccountInformationAPI(user)),
     actAddUserAPI: user => dispatch(actAddUserAPI(user)),
-    actUpdateUserAPI: user => dispatch(actUpdateUserAPI(user))
+    actUpdateUserAPI: user => dispatch(actUpdateUserAPI(user)),
+    actDeleteUserAPI: account => dispatch(actDeleteUserAPI(account))
   };
 };
 export default connect(null, mapDispatchToProps)(Header);
