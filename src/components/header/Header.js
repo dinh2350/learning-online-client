@@ -21,6 +21,10 @@ export default function Header(props) {
     props.actGetUserListAPI("string");
     props.actGetUserListByPaginationAPI();
     props.actGetSearchUserAPI("cao");
+    props.actAccountInformationAPI({
+      taiKhoan: "string",
+      matKhau: "string"
+    });
   }, []);
 
   function handleClick() {
