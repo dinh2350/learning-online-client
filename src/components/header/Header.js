@@ -25,6 +25,15 @@ export default function Header(props) {
       taiKhoan: "string",
       matKhau: "string"
     });
+    props.actAddUserAPI({
+      taiKhoan: "string11",
+      matKhau: "string",
+      hoTen: "string",
+      soDT: "string",
+      maLoaiNguoiDung: "GV",
+      maNhom: "GP01",
+      email: "string11@lol.com"
+    });
   }, []);
 
   function handleClick() {
