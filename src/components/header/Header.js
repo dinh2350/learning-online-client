@@ -25,10 +25,19 @@ export default function Header(props) {
       taiKhoan: "string",
       matKhau: "string"
     });
-    props.actAddUserAPI({
+    // props.actAddUserAPI({
+    //   taiKhoan: "string11",
+    //   matKhau: "string",
+    //   hoTen: "string",
+    //   soDT: "string",
+    //   maLoaiNguoiDung: "GV",
+    //   maNhom: "GP01",
+    //   email: "string11@lol.com"
+    // });
+    props.actUpdateUserAPI({
       taiKhoan: "string11",
       matKhau: "string",
-      hoTen: "string",
+      hoTen: "string hao",
       soDT: "string",
       maLoaiNguoiDung: "GV",
       maNhom: "GP01",
