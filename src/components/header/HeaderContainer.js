@@ -6,6 +6,7 @@ import {
   actGetStudentInformationOfCourseAPI,
   actCreateCourseAPI
 } from "./../../store/actions/courseActions";
+import { actGetUserTypeListAPI } from "../../store/actions/userActions";
 const mapDispatchToProps = dispatch => {
   return {
     actGetCourseListByPaginationAPI: (
@@ -23,7 +24,8 @@ const mapDispatchToProps = dispatch => {
     },
     actCreateCourseAPI: course => {
       dispatch(actCreateCourseAPI(course));
-    }
+    },
+    actGetUserTypeListAPI: () => dispatch(actGetUserTypeListAPI())
   };
 };
 export default connect(null, mapDispatchToProps)(Header);

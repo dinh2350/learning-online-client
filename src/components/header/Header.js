@@ -5,6 +5,7 @@ export default function Header(props) {
     props.actGetCourseListByPaginationAPI();
     props.actGetCourseInformationAPI();
     props.actGetStudentInformationOfCourseAPI();
+    props.actGetUserTypeListAPI();
   }, []);
 
   function handleClick() {
