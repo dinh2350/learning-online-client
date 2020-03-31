@@ -54,12 +54,10 @@ export const actGetCourseListByCatalogAPI = catalogCode => {
 };
 
 export const actGetCourseListByPaginationAPI = (courseName, page, pageSize) => {
-  const data = { tenKhoaHoc: courseName };
   return dispatch => {
     api(
-      `QuanLyKhoaHoc/LayDanhSachKhoaHoc_PhanTrang?page=${page}&pageSize=${pageSize}&MaNhom=${groupCode}`,
-      "GET",
-      data
+      `QuanLyKhoaHoc/LayDanhSachKhoaHoc_PhanTrang?tenKhoaHoc=${courseName}&page=${page}&pageSize=${pageSize}&MaNhom=${groupCode}`,
+      "GET"
     )
       .then(result => {
         dispatch({

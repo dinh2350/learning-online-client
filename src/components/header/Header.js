@@ -6,6 +6,20 @@ export default function Header(props) {
     props.actGetCourseInformationAPI();
     props.actGetStudentInformationOfCourseAPI();
     props.actGetUserTypeListAPI();
+    props.actLogInAPI({
+      taiKhoan: "string",
+      matKhau: "string"
+    });
+    props.actRegisterUserAPI({
+      taiKhoan: "string2",
+      matKhau: "string",
+      hoTen: "string",
+      soDT: "string",
+      maNhom: "GP01",
+      email: "string@slon.com.vn"
+    });
+    props.actGetUserListAPI("string");
+    props.actGetUserListByPaginationAPI();
   }, []);
 
   function handleClick() {
