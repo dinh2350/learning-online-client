@@ -19,6 +19,9 @@ const userReducer = (state = initialState, action) => {
     case constantsAct.GET_USER_LIST_BY_PAGINATION:
       state.userListByPagination = action.userListByPagination;
       break;
+    case constantsAct.GET_SEARCH_USER:
+      state.searchUser = action.searchUser;
+      break;
     default:
       break;
   }

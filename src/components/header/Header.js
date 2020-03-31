@@ -20,6 +20,7 @@ export default function Header(props) {
     });
     props.actGetUserListAPI("string");
     props.actGetUserListByPaginationAPI();
+    props.actGetSearchUserAPI("cao");
   }, []);
 
   function handleClick() {

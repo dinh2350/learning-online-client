@@ -81,3 +81,23 @@ export const actGetUserListByPaginationAPI = (keyWork, page, pageSize) => {
       });
   };
 };
+
+export const actGetSearchUserAPI = keyWork => {
+  return dispatch => {
+    api(
+      `QuanLyNguoiDung/TimKiemNguoiDung?MaNhom=${groupCode}&${
+        keyWork ? `tuKhoa=${keyWork}` : ""
+      }`,
+      "GET"
+    )
+      .then(result => {
+        dispatch({
+          type: constantsAct.GET_SEARCH_USER,
+          searchUser: result.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+};
