@@ -24,6 +24,10 @@ const userReducer = (state = initialState, action) => {
       break;
     case constantsAct.ACCOUNT_INFORMATION:
       state.accountInformation = action.accountInformation;
+      break;
+    case constantsAct.ADD_USER:
+      state.addUser = action.addUser;
+      break;
     default:
       break;
   }
