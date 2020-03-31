@@ -22,6 +22,8 @@ const userReducer = (state = initialState, action) => {
     case constantsAct.GET_SEARCH_USER:
       state.searchUser = action.searchUser;
       break;
+    case constantsAct.ACCOUNT_INFORMATION:
+      state.accountInformation = action.accountInformation;
     default:
       break;
   }
