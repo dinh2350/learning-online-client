@@ -15,3 +15,69 @@ export const actGetUserTypeListAPI = () => {
       });
   };
 };
+export const actLogInAPI = user => {
+  return dispatch => {
+    api(`QuanLyNguoiDung/DangNhap`, "POST", user)
+      .then(result => {
+        dispatch({
+          type: constantsAct.LOG_IN,
+          user: result.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+};
+export const actRegisterUserAPI = user => {
+  return dispatch => {
+    api(`QuanLyNguoiDung/DangKy`, "POST", user)
+      .then(result => {
+        dispatch({
+          type: constantsAct.REGISTER_USER,
+          registerUser: result.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+};
+
+export const actGetUserListAPI = keyWork => {
+  return dispatch => {
+    api(
+      `QuanLyNguoiDung/LayDanhSachNguoiDung?MaNhom=${groupCode}&tuKhoa=${keyWork}`,
+      "GET"
+    )
+      .then(result => {
+        dispatch({
+          type: constantsAct.GET_USER_LIST,
+          getUserList: result.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+};
+
+export const actGetUserListByPaginationAPI = (keyWork, page, pageSize) => {
+  return dispatch => {
+    api(
+      `QuanLyNguoiDung/LayDanhSachNguoiDung_PhanTrang?MaNhom=${groupCode}&${
+        keyWork ? `tuKhoa=${keyWork}` : ""
+      }&page=${page}&pageSize=${pageSize}`,
+      "GET"
+    )
+      .then(result => {
+        dispatch({
+          type: constantsAct.GET_USER_LIST_BY_PAGINATION,
+          userListByPagination: result.data
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+};

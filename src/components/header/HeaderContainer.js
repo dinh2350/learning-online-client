@@ -6,7 +6,13 @@ import {
   actGetStudentInformationOfCourseAPI,
   actCreateCourseAPI
 } from "./../../store/actions/courseActions";
-import { actGetUserTypeListAPI } from "../../store/actions/userActions";
+import {
+  actGetUserTypeListAPI,
+  actLogInAPI,
+  actRegisterUserAPI,
+  actGetUserListAPI,
+  actGetUserListByPaginationAPI
+} from "../../store/actions/userActions";
 const mapDispatchToProps = dispatch => {
   return {
     actGetCourseListByPaginationAPI: (
@@ -25,7 +31,15 @@ const mapDispatchToProps = dispatch => {
     actCreateCourseAPI: course => {
       dispatch(actCreateCourseAPI(course));
     },
-    actGetUserTypeListAPI: () => dispatch(actGetUserTypeListAPI())
+    actGetUserTypeListAPI: () => dispatch(actGetUserTypeListAPI()),
+    actLogInAPI: user => dispatch(actLogInAPI(user)),
+    actRegisterUserAPI: user => dispatch(actRegisterUserAPI(user)),
+    actGetUserListAPI: keyWork => dispatch(actGetUserListAPI(keyWork)),
+    actGetUserListByPaginationAPI: (
+      keyWork = "",
+      page = "1",
+      pageSize = "10"
+    ) => dispatch(actGetUserListByPaginationAPI(keyWork, page, pageSize))
   };
 };
 export default connect(null, mapDispatchToProps)(Header);
