@@ -5,16 +5,16 @@
     align-items: center;
     text-decoration: none;
     img {
-      width: 30px;
-      height: 30px;
-      border-radius: 3px;
+      width: $lai_w;
+      height: $lai_h;
+      border-radius: $lai_border_radious;
     }
     span {
-      color: $color-blue-0;
-      margin-left: 12px;
-      font-size: 1rem;
-      letter-spacing: 4px;
-      font-weight: 450;
+      color: $las_c;
+      margin-left: $las_ml;
+      font-size: $las_fs;
+      letter-spacing: $las_ls;
+      font-weight: $las_fw;
     }
   }
 }

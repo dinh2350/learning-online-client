@@ -5,43 +5,43 @@
   button {
     outline: none;
     cursor: pointer;
-    background-color: $color-gray-0;
+    background-color: $sb_bc;
     border: 0px none white;
-    border-right: 1.5px solid $color-gray-2;
-    padding: 12px 15px;
+    border-right: $sb_boder_right;
+    padding: $sb_p;
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    border-radius: 3px 0 0 3px;
+    border-radius: $sb_border_radius;
     img {
-      width: 10px;
-      height: 10px;
-      margin-left: 8px;
+      width: $sbi_w;
+      height: $sbi_h;
+      margin-left: $sbi_ml;
     }
     span {
-      font-size: 1rem;
-      font-weight: 600;
-      color: $color-gray-1;
+      font-size: $sbs_fs;
+      font-weight: $sbs_fw;
+      color: $sbs_c;
     }
   }
   .contentSwitch {
     background-color: white;
-    border: 0.5px solid $color-gray-1;
+    border: $sc_b;
     position: absolute;
-    top: 50px;
-    left: 0;
-    min-width: 140px;
+    top: $sc_top;
+    left: $sc_left;
+    min-width: $sc_mw;
 
-    border-radius: 4px;
-    box-shadow: 1px 2px 11px $color-gray-1;
+    border-radius: $sc_boder_radius;
+    box-shadow: $sc_bs;
     h5 {
-      margin-bottom: 5px;
-      margin-left: 20px;
+      margin-bottom: $sc_h5_mb;
+      margin-left: $sc_h5_ml;
     }
     ul {
-      padding: 0;
-      margin: 2px 0;
+      padding: $sc_ul_p;
+      margin: $sc_ul_m;
       .contentSwitch__item-choose {
         border: 0.5px solid $color-blue-1;
         border-left: 1px solid $color-blue-0;
@@ -51,13 +51,13 @@
       li {
         cursor: pointer;
         list-style: none;
-        margin: 0px 0;
+        margin: $sc_ul_li_m;
 
         .contentSwitch__item {
-          margin-left: 20px;
-          padding: 10px 0;
-          font-weight: 600;
-          color: $color-gray-1;
+          margin-left: $sc_ul_li_ci_ml;
+          padding: $sc_ul_li_ci_p;
+          font-weight: $sc_ul_li_ci_fw;
+          color: $sc_ul_li_ci_c;
         }
         &:hover {
           background-color: $color-gray-5;

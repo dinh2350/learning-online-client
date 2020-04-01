@@ -1,10 +1,13 @@
 @import "../../assets/styles/Helpers/variable.scss";
 .Header {
-  box-shadow: 0px 1px 8px $h_bs_color;
-  margin-bottom: $h_mg_bt;
+  box-shadow: 0px 1px 8px $h_bs_c;
+  margin-bottom: $h_mb;
+  position: sticky;
+  top: 0;
+  background-color: white;
   .Header__wrap {
     display: flex;
-    padding: $h_wr_pd_tp_bt $h_wr_pd_lf_rg;
+    padding: $hwr_ptb $hwr_plr;
     align-items: center;
     justify-content: space-between;
   }

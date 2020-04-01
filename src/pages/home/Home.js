@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./Home.scss";
+import PillListModuleContainer from "./pillListModule/PillListModuleContainer";
 export default function Home(props) {
   useEffect(
     function() {
@@ -9,5 +10,10 @@ export default function Home(props) {
     },
     [props]
   );
-  return <div className="home">Page Home</div>;
+  return (
+    <div className="home">
+      Page Home
+      <PillListModuleContainer />
+    </div>
+  );
 }

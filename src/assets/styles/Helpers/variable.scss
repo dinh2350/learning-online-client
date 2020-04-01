@@ -1,10 +1,70 @@
 // khoi tao bien o day
 //component header
-$h_mg_bt: 5px;
-$h_wr_pd_tp_bt: 10px;
-$h_wr_pd_lf_rg: 80px;
-$h_bs_color: rgba(199, 209, 216, 1);
+$h_mb: 5px;
+$hwr_ptb: 10px;
+$hwr_plr: 80px;
+$h_bs_c: rgba(199, 209, 216, 1);
 //component search input
+$s_w: 60%;
+$itb_ptb: 10px;
+$itb_plr: 12px;
+$itb_br: 0 3px 3px 0;
+$itb_img_w: 20px;
+$itb_img_h: 19px;
+//============ component switch==============//
+$sb_bc: rgba(199, 209, 216, 0.35);
+$sb_boder_right: 1.5px solid rgba(199, 209, 216, 1);
+$sb_p: 12px 15px;
+$sb_border_radius: 3px 0 0 3px;
+//button img
+$sbi_w: 10px;
+$sbi_h: 10px;
+$sbi_ml: 8px;
+// button span
+$sbs_fs: 1rem;
+$sbs_fw: 600;
+$sbs_c: rgba(0, 0, 0, 0.4);
+// switch contentSwitch
+$sc_b: 0.5px solid rgba(0, 0, 0, 0.4);
+$sc_top: 50px;
+$sc_left: 0;
+$sc_mw: 140px;
+$sc_boder_radius: 4px;
+$sc_bs: 1px 2px 11px rgba(0, 0, 0, 0.4);
+$sc_h5_mb: 5px;
+$sc_h5_ml: 20px;
+$sc_ul_p: 0;
+$sc_ul_m: 2px 0;
+$sc_ul_li_m: 0;
+/// sc ul li content__item
+$sc_ul_li_ci_ml: 20px;
+$sc_ul_li_ci_p: 10px 0;
+$sc_ul_li_ci_fw: 600;
+$sc_ul_li_ci_c: rgba(0, 0, 0, 0.4);
+//================ components input ===========//
+$i_boder_right: 1.5px solid rgba(199, 209, 216, 1);
+$i_bc: rgba(199, 209, 216, 0.35);
+$i_pt: 13.5px;
+$i_pb: 13.5px;
+//=============component Logo =====//
+//Logo a img
+$lai_w: 30px;
+$lai_h: 30px;
+$lai_border_radious: 3px;
+//Logo a span
+$las_c: #0073b1;
+$las_ml: 12px;
+$las_fs: 1rem;
+$las_ls: 4px;
+$las_fw: 450;
+//=============component BtnStart =====//
+$bs_p: 12px 15px;
+$bs_fs: 1rem;
+$bs_fw: 600;
+$bs_c: rgba(0, 0, 0, 0.4);
+$bs_hover_bc: rgba(0, 0, 0, 0.08);
+$bs_border-radius: 3px;
+
 // color blue
 $color-blue-0: #0073b1;
 $color-blue-1: rgba(0, 115, 177, 0.2);

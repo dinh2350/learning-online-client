@@ -1,6 +1,6 @@
 @import "../../../assets/styles/Helpers/variable.scss";
 .SearchInput {
-  width: 60%;
+  width: $s_w;
   display: flex;
 
   .Input__item {
@@ -12,13 +12,13 @@
     button {
       outline: none;
       cursor: pointer;
-      padding: 10px 12px;
+      padding: $itb_ptb $itb_plr;
       border: none;
       background-color: $color-gray-0;
-      border-radius: 0 3px 3px 0;
+      border-radius: $itb_br;
       img {
-        width: 20px;
-        height: 19px;
+        width: $itb_img_w;
+        height: $itb_img_h;
       }
     }
   }

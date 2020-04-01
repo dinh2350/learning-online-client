@@ -4,14 +4,14 @@
     outline: none;
     cursor: pointer;
     border: none;
-    padding: 12px 15px;
-    font-size: 1rem;
+    padding: $bs_p;
+    font-size: $bs_fs;
     background-color: white;
-    font-weight: 600;
-    color: $color-gray-1;
+    font-weight: $bs_fw;
+    color: $bs_c;
     &:hover {
-      background-color: $color-gray-4;
-      border-radius: 3px;
+      background-color: $bs_hover_bc;
+      border-radius: $bs_border-radius;
     }
   }
 }
