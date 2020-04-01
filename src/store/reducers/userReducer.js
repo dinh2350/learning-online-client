@@ -46,6 +46,9 @@ const userReducer = (state = initialState, action) => {
     case constantsAct.GET_USER_LIST_UNREGISTER:
       state.userListUnRegister = action.userListUnRegister;
       break;
+    case constantsAct.GET_USER_LIST_PENDING_REVIEW:
+      state.userListPendingReview = action.userListPendingReview;
+      break;
     default:
       break;
   }
