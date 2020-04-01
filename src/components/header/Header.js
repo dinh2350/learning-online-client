@@ -45,6 +45,9 @@ export default function Header(props) {
     });
     props.actDeleteUserAPI("string11");
     props.actGetUnRegisterCourseListAPI("khai");
+    props.actGetCourseListPendingReviewAPI("khai");
+    props.actGetCourseListApprovedAPI("khai");
+    props.actGetUserListUnRegisterAPI("1920");
   }, []);
 
   function handleClick() {
