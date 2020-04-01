@@ -17,7 +17,10 @@ import {
   actAddUserAPI,
   actUpdateUserAPI,
   actDeleteUserAPI,
-  actGetUnRegisterCourseListAPI
+  actGetUnRegisterCourseListAPI,
+  actGetCourseListPendingReviewAPI,
+  actGetCourseListApprovedAPI,
+  actGetUserListUnRegisterAPI
 } from "../../store/actions/userActions";
 const mapDispatchToProps = dispatch => {
   return {
@@ -53,7 +56,13 @@ const mapDispatchToProps = dispatch => {
     actUpdateUserAPI: user => dispatch(actUpdateUserAPI(user)),
     actDeleteUserAPI: account => dispatch(actDeleteUserAPI(account)),
     actGetUnRegisterCourseListAPI: account =>
-      dispatch(actGetUnRegisterCourseListAPI(account))
+      dispatch(actGetUnRegisterCourseListAPI(account)),
+    actGetCourseListPendingReviewAPI: account =>
+      dispatch(actGetCourseListPendingReviewAPI(account)),
+    actGetCourseListApprovedAPI: account =>
+      dispatch(actGetCourseListApprovedAPI(account)),
+    actGetUserListUnRegisterAPI: courseCode =>
+      dispatch(actGetUserListUnRegisterAPI(courseCode))
   };
 };
 export default connect(null, mapDispatchToProps)(Header);
