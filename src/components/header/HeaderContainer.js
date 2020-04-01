@@ -21,7 +21,8 @@ import {
   actGetCourseListPendingReviewAPI,
   actGetCourseListApprovedAPI,
   actGetUserListUnRegisterAPI,
-  actGetUserListPendingReviewAPI
+  actGetUserListPendingReviewAPI,
+  actGetUserListOfCourseAPI
 } from "../../store/actions/userActions";
 const mapDispatchToProps = dispatch => {
   return {
@@ -65,7 +66,9 @@ const mapDispatchToProps = dispatch => {
     actGetUserListUnRegisterAPI: courseCode =>
       dispatch(actGetUserListUnRegisterAPI(courseCode)),
     actGetUserListPendingReviewAPI: courseCode =>
-      dispatch(actGetUserListPendingReviewAPI(courseCode))
+      dispatch(actGetUserListPendingReviewAPI(courseCode)),
+    actGetUserListOfCourseAPI: courseCode =>
+      dispatch(actGetUserListOfCourseAPI(courseCode))
   };
 };
 export default connect(null, mapDispatchToProps)(Header);

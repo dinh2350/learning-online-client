@@ -49,6 +49,7 @@ export default function Header(props) {
     props.actGetCourseListApprovedAPI("khai");
     props.actGetUserListUnRegisterAPI("1920");
     props.actGetUserListPendingReviewAPI("8957893753");
+    props.actGetUserListOfCourseAPI("8957893753");
   }, []);
 
   function handleClick() {
