@@ -16,7 +16,8 @@ import {
   actAccountInformationAPI,
   actAddUserAPI,
   actUpdateUserAPI,
-  actDeleteUserAPI
+  actDeleteUserAPI,
+  actGetUnRegisterCourseListAPI
 } from "../../store/actions/userActions";
 const mapDispatchToProps = dispatch => {
   return {
@@ -50,7 +51,9 @@ const mapDispatchToProps = dispatch => {
     actAccountInformationAPI: user => dispatch(actAccountInformationAPI(user)),
     actAddUserAPI: user => dispatch(actAddUserAPI(user)),
     actUpdateUserAPI: user => dispatch(actUpdateUserAPI(user)),
-    actDeleteUserAPI: account => dispatch(actDeleteUserAPI(account))
+    actDeleteUserAPI: account => dispatch(actDeleteUserAPI(account)),
+    actGetUnRegisterCourseListAPI: account =>
+      dispatch(actGetUnRegisterCourseListAPI(account))
   };
 };
 export default connect(null, mapDispatchToProps)(Header);

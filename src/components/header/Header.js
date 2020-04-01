@@ -44,6 +44,7 @@ export default function Header(props) {
       email: "string11@lol.com"
     });
     props.actDeleteUserAPI("string11");
+    props.actGetUnRegisterCourseListAPI("khai");
   }, []);
 
   function handleClick() {

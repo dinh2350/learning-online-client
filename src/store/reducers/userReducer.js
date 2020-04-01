@@ -34,6 +34,9 @@ const userReducer = (state = initialState, action) => {
     case constantsAct.DELETE_USER:
       state.deleteUser = action.deleteUser;
       break;
+    case constantsAct.GET_UNREGISTER_COURSE_LIST:
+      state.unRegisterCourseList = action.unRegisterCourseList;
+      break;
     default:
       break;
   }
