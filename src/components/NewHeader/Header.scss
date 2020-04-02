@@ -10,5 +10,26 @@
     padding: $hwr_ptb $hwr_plr;
     align-items: center;
     justify-content: space-between;
+    .buttonGroup {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  .header__inputReponsive {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .Header {
+    .Header__wrap {
+      padding: 10px 10px;
+    }
+  }
+}
+@media screen and (max-width: 740px) {
+  .Header {
+    .header__inputReponsive {
+      display: inline;
+    }
   }
 }

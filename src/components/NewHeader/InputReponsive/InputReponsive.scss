@@ -1,0 +1,14 @@
+.InputReponsive {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  input {
+    width: 94%;
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 3px;
+    padding-left: 20px;
+    margin: 0 10px 10px 10px;
+    height: 35px;
+  }
+}
