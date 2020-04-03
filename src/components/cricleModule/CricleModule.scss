@@ -8,7 +8,7 @@
       padding: 50px;
       h2 {
         color: #b24020;
-        font-weight: 1;
+        font-weight: 400;
         margin: 5px 0;
       }
       h3 {
@@ -48,7 +48,11 @@
   .CricleModule {
     .CricleModule__wrap {
       .CricleModule__content {
+        padding: 10px;
         font-size: 2.4rem;
+      }
+      img {
+        display: none;
       }
     }
   }

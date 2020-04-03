@@ -1,14 +1,56 @@
 .InputReponsive {
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
+  button {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-left: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-right: none;
+    border-radius: 3px 0 0 3px;
+    background-color: rgba(128, 128, 128, 0.2);
+    height: 39px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    .InputReponsive__switch {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background-color: white;
+      min-width: 140px;
+      box-shadow: 0px 4px 10px rgba(128, 128, 128, 0.7);
+      border-radius: 4px;
+      .InputReponsive__switch__list {
+        list-style: none;
+        padding: 0px;
+        .InputReponsive__switch__list__item {
+          &:hover {
+            background-color: rgba(128, 128, 128, 0.2);
+          }
+          .InputReponsive__switch__item {
+            text-align: start;
+            margin-left: 10px;
+            padding: 10px 10px;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
   input {
-    width: 94%;
-    border: 1px solid gray;
+    width: 90%;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    border-left: none;
     outline: none;
-    border-radius: 3px;
-    padding-left: 20px;
-    margin: 0 10px 10px 10px;
+    border-radius: 0 3px 3px 0;
     height: 35px;
+    margin-right: 8px;
   }
 }
