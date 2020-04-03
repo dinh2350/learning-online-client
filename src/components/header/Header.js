@@ -5,6 +5,51 @@ export default function Header(props) {
     props.actGetCourseListByPaginationAPI();
     props.actGetCourseInformationAPI();
     props.actGetStudentInformationOfCourseAPI();
+    props.actGetUserTypeListAPI();
+    props.actLogInAPI({
+      taiKhoan: "string",
+      matKhau: "string"
+    });
+    props.actRegisterUserAPI({
+      taiKhoan: "string2",
+      matKhau: "string",
+      hoTen: "string",
+      soDT: "string",
+      maNhom: "GP01",
+      email: "string@slon.com.vn"
+    });
+    props.actGetUserListAPI("string");
+    props.actGetUserListByPaginationAPI();
+    props.actGetSearchUserAPI("cao");
+    props.actAccountInformationAPI({
+      taiKhoan: "string",
+      matKhau: "string"
+    });
+    // props.actAddUserAPI({
+    //   taiKhoan: "string11",
+    //   matKhau: "string",
+    //   hoTen: "string",
+    //   soDT: "string",
+    //   maLoaiNguoiDung: "GV",
+    //   maNhom: "GP01",
+    //   email: "string11@lol.com"
+    // });
+    props.actUpdateUserAPI({
+      taiKhoan: "string11",
+      matKhau: "string",
+      hoTen: "string hao",
+      soDT: "string",
+      maLoaiNguoiDung: "GV",
+      maNhom: "GP01",
+      email: "string11@lol.com"
+    });
+    props.actDeleteUserAPI("string11");
+    props.actGetUnRegisterCourseListAPI("khai");
+    props.actGetCourseListPendingReviewAPI("khai");
+    props.actGetCourseListApprovedAPI("khai");
+    props.actGetUserListUnRegisterAPI("1920");
+    props.actGetUserListPendingReviewAPI("8957893753");
+    props.actGetUserListOfCourseAPI("8957893753");
   }, []);
 
   function handleClick() {

@@ -6,7 +6,6 @@ export default function Home(props) {
     function() {
       const { actGetCatalogListAPI, actGetCourseListAPI } = props;
       actGetCatalogListAPI();
-      actGetCourseListAPI();
     },
     [props]
   );
