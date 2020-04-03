@@ -5,15 +5,15 @@
   button {
     outline: none;
     cursor: pointer;
-    background-color: $sb_bc;
-    border: 0px none white;
-    border-right: $sb_boder_right;
+    background-color: $sb_bg;
+    border: none;
+    border-right: $sb_bright;
     padding: $sb_p;
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    border-radius: $sb_border_radius;
+    border-radius: $sb_br;
     img {
       width: $sbi_w;
       height: $sbi_h;
@@ -32,8 +32,8 @@
     top: $sc_top;
     left: $sc_left;
     min-width: $sc_mw;
-    font-size: 1.6rem;
-    border-radius: $sc_boder_radius;
+    font-size: $sc_br;
+    border-radius: $sc_br;
     box-shadow: $sc_bs;
     h5 {
       margin-bottom: $sc_h5_mb;

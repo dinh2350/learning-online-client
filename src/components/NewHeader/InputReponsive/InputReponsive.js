@@ -7,6 +7,7 @@ export default function InputReponsive(props) {
   const handlClick = () => {
     setisSwitch(!isSwitch);
   };
+  // hàm show list switch
   const showSwitch = () => {
     return (
       <div className="InputReponsive__switch">

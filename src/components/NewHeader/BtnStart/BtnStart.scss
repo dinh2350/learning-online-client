@@ -4,17 +4,17 @@
     outline: none;
     cursor: pointer;
     border: none;
-    height: 40px;
-    width: 130px;
-    padding: 0 2px;
-    font-size: $bs_fs;
+    height: $bsb_h;
+    width: $bsb_w;
+    padding: $bsb_p;
+    font-size: $bsb_fs;
     background-color: white;
-    font-weight: $bs_fw;
-    color: $bs_c;
+    font-weight: $bsb_fw;
+    color: $bsb_c;
     margin: 0 0px 0 0px;
     &:hover {
-      background-color: $bs_hover_bc;
-      border-radius: $bs_border-radius;
+      background-color: $bsb_h_bg;
+      border-radius: $bsb_h_br;
     }
   }
 }
@@ -22,11 +22,9 @@
 @media screen and (max-width: 1023px) {
   .BtnStart {
     button {
-      height: 30px;
-      width: 100px;
-      font-size: 1.4rem;
-      font-weight: $bs_fw;
-      color: $bs_c;
+      height: $bsbm_h;
+      width: $bsbm_w;
+      font-size: $bsbm_fs;
       margin: 0;
     }
   }

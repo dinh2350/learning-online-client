@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import "./Home.scss";
-import PillListModuleContainer from "../../components/pillListModule/PillListModuleContainer";
-import TileModuleContainer from "../../components/tileModule/TileModuleContainer";
-import CricleModuleContainer from "../../components/cricleModule/CricleModuleContainer";
+import PillListModuleContainer from "./pillListModule/PillListModuleContainer";
+import TileModuleContainer from "./tileModule/TileModuleContainer";
+import CricleModuleContainer from "./cricleModule/CricleModuleContainer";
 export default function Home(props) {
   useEffect(
     function() {

@@ -1,6 +1,6 @@
 import React from "react";
 import "./CricleModule.scss";
-import imgCircle from "../../assets/image/img-header/circle.jpg";
+import imgCircle from "../../../assets/image/img-header/circle.jpg";
 export default function CricleModule() {
   return (
     <div className="CricleModule">

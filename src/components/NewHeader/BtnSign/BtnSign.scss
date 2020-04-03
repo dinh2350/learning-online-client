@@ -3,18 +3,18 @@
   button {
     outline: none;
     cursor: pointer;
-    border: 1px solid $color-blue-0;
+    border: $bb_b;
     background-color: white;
-    height: 40px;
-    width: 100px;
-    border-radius: 3px;
+    height: $bb_h;
+    width: $bb_w;
+    border-radius: $bb_br;
     color: $color-blue-0;
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin-left: 20px;
+    font-size: $bb_fs;
+    font-weight: $bb_fw;
+    margin-left: $bb_ml;
     &:hover {
-      background-color: $color-blue-1;
-      border: 2px solid $color-blue-0;
+      background-color: $bb_h_bg;
+      border: $bb_h_b;
       padding: 1px 1px;
     }
   }
@@ -22,12 +22,12 @@
 @media screen and (max-width: 1023px) {
   .BtnSign {
     button {
-      height: 30px;
-      width: 70px;
-      padding: 0px 0px;
-      font-size: 1.4rem;
-      font-weight: 400;
-      margin-left: 20px;
+      height: $bbm_h;
+      width: $bbm_w;
+      padding: 0px;
+      font-size: $bbm_fs;
+      font-weight: $bbm_fw;
+      margin-left: $bbm_ml;
       &:hover {
         background-color: $color-blue-1;
         border: 2px solid $color-blue-0;

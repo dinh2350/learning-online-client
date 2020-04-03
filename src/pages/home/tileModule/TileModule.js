@@ -1,7 +1,7 @@
 import React from "react";
 import "./TileModule.scss";
-import imgTitleModule from "../../assets/image/img-header/anh_title_module.svg";
-import imgTitleModule2 from "../../assets/image/img-header/anh_title_module_2.svg";
+import imgTitleModule from "../../../assets/image/img-header/anh_title_module.svg";
+import imgTitleModule2 from "../../../assets/image/img-header/anh_title_module_2.svg";
 export default function TileModule() {
   return (
     <div className="TileModule">

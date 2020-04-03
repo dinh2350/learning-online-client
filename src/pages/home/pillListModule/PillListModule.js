@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./PillListModule.scss";
-import imgUparrow from "../../assets/image/img-header/up-arrow.svg";
-import imgDownarrow from "../../assets/image/img-header/down-arrow.svg";
+import imgUparrow from "../../../assets/image/img-header/up-arrow.svg";
+import imgDownarrow from "../../../assets/image/img-header/down-arrow.svg";
 export default function PillListModule(props) {
   const [isShowMore, setisShowMore] = useState(false);
   const handleClickShow = () => {

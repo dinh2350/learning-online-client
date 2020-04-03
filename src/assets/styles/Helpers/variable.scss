@@ -1,21 +1,82 @@
-// khoi tao bien o day
-//component header
-$h_mb: 5px;
-$hwr_ptb: 10px;
-$hwr_plr: 40px;
-$h_bs_c: rgba(199, 209, 216, 1);
-//component search input
-$s_w: 60%;
-$itb_ptb: 10px;
-$itb_plr: 12px;
-$itb_br: 0 3px 3px 0;
-$itb_img_w: 20px;
-$itb_img_h: 19px;
-//============ component switch==============//
-$sb_bc: rgba(199, 209, 216, 0.35);
-$sb_boder_right: 1.5px solid rgba(199, 209, 216, 1);
+//************ Component BtnSign **********//
+$bb_b: 1px solid #0073b1;
+$bb_h: 40px;
+$bb_w: 100px;
+$bb_br: 3px;
+$bb_c: #0073b1;
+$bb_fs: 1.6rem;
+$bb_fw: 600;
+$bb_ml: 20px;
+//->hover
+$bb_h_bg: rgba(0, 115, 177, 0.2);
+$bb_h_b: 2px solid #0073b1;
+//->media(max width 1023)
+$bbm_h: 30px;
+$bbm_w: 70px;
+$bbm_fs: 1.4rem;
+$bbm_fw: 400;
+$bbm_ml: 20px;
+//
+//******************* Component BtnStart**************
+$bsb_h: 40px;
+$bsb_w: 130px;
+$bsb_p: 0 2px;
+$bsb_fs: 1.6rem;
+$bsb_fw: 600;
+$bsb_c: rgba(0, 0, 0, 0.4);
+//->hover
+$bsb_h_bg: rgba(0, 0, 0, 0.08);
+$bsb_h_br: 3px;
+//-> media(max-width:1023)
+$bsbm_h: 30px;
+$bsbm_w: 100px;
+$bsbm_fs: 1.4rem;
+
+//****************** InputReponsive ************
+$ib_ml: 8px;
+$ib_b: 1px solid rgba(128, 128, 128, 0.5);
+$ib_br: 3px 0 0 3px;
+$ib_bg: rgba(128, 128, 128, 0.2);
+$ib_h: 39px;
+$ibi_h: 30px;
+$ibi_w: 30px;
+$ibis_t: 40px;
+$ibis_mw: 140px;
+$ibis_bs: 0px 4px 10px rgba(128, 128, 128, 0.7);
+$ibis_br: 4px;
+$ibisli_h_bg: rgba(128, 128, 128, 0.2);
+$ibisi_ml: 10px;
+$ibisli_p: 10px 10px;
+$ibisli_fs: 1.5rem;
+$ii_w: 90%;
+$ii_b: 1px solid rgba(128, 128, 128, 0.5);
+$ii_br: 0 3px 0 3px;
+$ii_h: 35px;
+$ii_mr: 8px;
+
+//******************component Logo ***************//
+
+$lai_w: 30px;
+$lai_h: 30px;
+$lai_br: 3px;
+
+$las_c: #0073b1;
+$las_ml: 12px;
+$las_fs: 1.6rem;
+$las_ls: 4px;
+$las_fw: 450;
+
+//**************** components input ***********//
+$i_bright: 1.5px solid rgba(199, 209, 216, 1);
+$i_bg: rgba(199, 209, 216, 0.35);
+$i_pt: 13.5px;
+$i_pb: 13.5px;
+
+//****************component switch*************//
+$sb_bg: rgba(199, 209, 216, 0.35);
+$sb_bright: 1.5px solid rgba(199, 209, 216, 1);
 $sb_p: 12px 15px;
-$sb_border_radius: 3px 0 0 3px;
+$sb_br: 3px 0 0 3px;
 //button img
 $sbi_w: 10px;
 $sbi_h: 10px;
@@ -29,7 +90,8 @@ $sc_b: 0.5px solid rgba(0, 0, 0, 0.4);
 $sc_top: 50px;
 $sc_left: 0;
 $sc_mw: 140px;
-$sc_boder_radius: 4px;
+$sc_br: 4px;
+$sc_fs: 1.6rem;
 $sc_bs: 1px 2px 11px rgba(0, 0, 0, 0.4);
 $sc_h5_mb: 5px;
 $sc_h5_ml: 20px;
@@ -41,29 +103,21 @@ $sc_ul_li_ci_ml: 20px;
 $sc_ul_li_ci_p: 10px 0;
 $sc_ul_li_ci_fw: 600;
 $sc_ul_li_ci_c: rgba(0, 0, 0, 0.4);
-//================ components input ===========//
-$i_boder_right: 1.5px solid rgba(199, 209, 216, 1);
-$i_bc: rgba(199, 209, 216, 0.35);
-$i_pt: 13.5px;
-$i_pb: 13.5px;
-//=============component Logo =====//
-//Logo a img
-$lai_w: 30px;
-$lai_h: 30px;
-$lai_border_radious: 3px;
-//Logo a span
-$las_c: #0073b1;
-$las_ml: 12px;
-$las_fs: 1.6rem;
-$las_ls: 4px;
-$las_fw: 450;
-//=============component BtnStart =====//
-$bs_p: 12px 15px;
-$bs_fs: 1.6rem;
-$bs_fw: 600;
-$bs_c: rgba(0, 0, 0, 0.4);
-$bs_hover_bc: rgba(0, 0, 0, 0.08);
-$bs_border-radius: 3px;
+
+//*************component search input**********
+$s_w: 60%;
+$itb_ptb: 10px;
+$itb_plr: 12px;
+$itb_br: 0 3px 3px 0;
+$itb_img_w: 20px;
+$itb_img_h: 19px;
+
+//****************component header*********************
+$h_bs: 0px 1px 8px rgba(199, 209, 216, 1);
+$h_mb: 5px;
+$hwr_p: 10px 40px;
+//-> media(max-width:1023px)
+$hhw_p: 10px 10px;
 
 // color blue
 $color-blue-0: #0073b1;
