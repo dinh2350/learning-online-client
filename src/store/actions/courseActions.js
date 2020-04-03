@@ -2,9 +2,13 @@ import * as constantsAct from "../constants/actionsTypes";
 import api from "./../../services/api";
 const groupCode = "GP01";
 export const actGetCourseListAPI = courseName => {
-  const data = { tenKhoaHoc: courseName };
   return dispatch => {
-    api(`QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=${groupCode}`, "GET", data)
+    api(
+      `QuanLyKhoaHoc/LayDanhSachKhoaHoc?${
+        courseName ? `tenKhoaHoc=${courseName}&` : ``
+      }MaNhom=${groupCode}`,
+      "GET"
+    )
       .then(result => {
         dispatch({
           type: constantsAct.GET_COURSE_LIST,
