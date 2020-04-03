@@ -1,11 +1,11 @@
-import Header from "./Header";
+import TestAPI from "./TestAPI";
 import { connect } from "react-redux";
 import {
   actGetCourseListByPaginationAPI,
   actGetCourseInformationAPI,
   actGetStudentInformationOfCourseAPI,
   actCreateCourseAPI
-} from "./../../store/actions/courseActions";
+} from "../../store/actions/courseActions";
 import {
   actGetUserTypeListAPI,
   actLogInAPI,
@@ -71,4 +71,4 @@ const mapDispatchToProps = dispatch => {
       dispatch(actGetUserListOfCourseAPI(courseCode))
   };
 };
-export default connect(null, mapDispatchToProps)(Header);
+export default connect(null, mapDispatchToProps)(TestAPI);
