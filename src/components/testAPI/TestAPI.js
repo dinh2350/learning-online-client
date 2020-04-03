@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Header.scss";
+import "./TestAPI.scss";
 export default function Header(props) {
   useEffect(function() {
     props.actGetCourseListByPaginationAPI();
