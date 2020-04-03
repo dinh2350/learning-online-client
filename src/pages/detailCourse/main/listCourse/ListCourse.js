@@ -24,6 +24,7 @@ export default function ListCourse() {
   const showListCourse = () => {
     return listCourse.map((item, key) => {
       return (
+
         <li
           onClick={() => handleClickShow(key, item)}
           key={key}
@@ -38,6 +39,7 @@ export default function ListCourse() {
       );
     });
   };
+  const
   return (
     <div className="ListCourse">
       <div className="ListCourse__wrap">
