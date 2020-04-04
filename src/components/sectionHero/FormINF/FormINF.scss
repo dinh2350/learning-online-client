@@ -1,0 +1,20 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+.FormINF {
+  height: 100%;
+  width: 100%;
+  .FormINF__wrapper {
+    height: 100%;
+    width: 100%;
+    h1 {
+      font-size: 6.4rem;
+      color: #2977c9;
+    }
+    @media screen and(max-width:768px) {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+  }
+  @media screen and(max-width:768px) {
+  }
+}

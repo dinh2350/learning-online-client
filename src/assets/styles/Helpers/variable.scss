@@ -7,6 +7,16 @@ $lt_fw: 600;
 $ltt_c: rgba(0, 0, 0, 0.6);
 $ltsa_c: #0073b1;
 
+// Sectionhero
+$sh_h: 90rem;
+$sh_w: 100%;
+$sh_p: 1rem;
+$li_h: auto;
+$li_w: 50%;
+$fi_fs: 6.4rem;
+//SectionJorn
+$msj_w: 112rem;
+
 // courese
 $ci_h: 15rem;
 $ci_br: 0.5rem;
@@ -15,3 +25,11 @@ $cn_c: rgba(0, 0, 0, 0.9);
 $cv_fs: 1.4rem;
 $cv_fw: 400;
 $cv_c: rgba(0, 0, 0, 0.6);
+
+//break points
+$breakpoints: (
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px
+);

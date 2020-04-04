@@ -7,27 +7,21 @@ export default function Header(props) {
     props.actGetStudentInformationOfCourseAPI();
   }, []);
 
-  function handleClick() {
-    props.actCreateCourseAPI({
-      maKhoaHoc: "hao",
-      biDanh: "hao",
-      tenKhoaHoc: "hao",
-      moTa: "hao hao hao",
-      luotXem: 10,
-      danhGia: 5,
-      hinhAnh:
-        "https://i.pinimg.com/originals/7a/2a/14/7a2a14ef4a76315f98cbe4aadd6554b6.jpg",
-      maNhom: "GP01",
-      ngayTao: "22-2-2020",
-      maDanhMucKhoaHoc: "BackEnd",
-      taiKhoanNguoiTao: "abc123"
-    });
-  }
-
   return (
-    <div className="header">
-      component Header
-      <button onClick={handleClick}>Create Course</button>
-    </div>
+    <section className="header">
+      <div className="header__wrapper">
+        <h1>Keep learning in the moments that matter</h1>
+        <h3>
+          Courses for every step of your career. Instruction with real-world
+          experience
+        </h3>
+        <button>
+          <h3>Start my free month</h3>
+        </button>
+        <button>
+          <h3>Buy for my team</h3>
+        </button>
+      </div>
+    </section>
   );
 }

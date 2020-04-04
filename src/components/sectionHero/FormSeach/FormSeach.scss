@@ -1,0 +1,31 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+.FormSeach {
+  .FormSeach__menu {
+    height: 5.5rem;
+    width: auto;
+    // background-color: green;
+    ul {
+      height: 100%;
+      list-style-type: none;
+      li {
+        width: 14%;
+        float: left;
+
+        button {
+          width: 100%;
+          height: 5rem;
+          background-color: white;
+          align-items: center;
+          font-family: inherit;
+          font-size: 2rem;
+          color: #0073b1;
+          font-weight: 600;
+          border: 1px solid transparent;
+          &:hover {
+            background-color: lightsteelblue;
+          }
+        }
+      }
+    }
+  }
+}
