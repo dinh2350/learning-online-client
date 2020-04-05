@@ -11,20 +11,19 @@ export default function ListCourse() {
     { title: "5. Wireless Security", isShowList: false },
     { title: "6. Account Security", isShowList: false },
     { title: "7. Data Security", isShowList: false },
-    { title: "Conclusion", isShowList: false }
+    { title: "Conclusion", isShowList: false },
   ]);
   const handleClickShow = (key, item) => {
     let listCourses = listCourse;
     setlisCourse([
       ...listCourses.slice(0, key),
       { ...item, isShowList: !item.isShowList },
-      ...listCourses.slice(key + 1)
+      ...listCourses.slice(key + 1),
     ]);
   };
   const showListCourse = () => {
     return listCourse.map((item, key) => {
       return (
-
         <li
           onClick={() => handleClickShow(key, item)}
           key={key}
@@ -34,12 +33,12 @@ export default function ListCourse() {
             <span>{item.title}</span>
             <img src={imgDownarrow} />
           </div>
-          <div>Nguyen Quang Phuoc</div>
+          {item.isShowList && <div>Nguyen Quang Phuoc</div>}
         </li>
       );
     });
   };
-  const
+
   return (
     <div className="ListCourse">
       <div className="ListCourse__wrap">

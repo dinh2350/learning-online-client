@@ -1,15 +1,16 @@
 import Home from "./pages/home/HomeContainer";
 import DetailCourse from "./pages/detailCourse/DetailCourseContainer";
+
 const RoutesList = [
   {
     path: "/",
     exact: true,
-    components: Home
+    components: Home,
   },
   {
-    path: "/detailCourse/",
+    path: "/course/:coursecode",
     exact: true,
-    components: DetailCourse
-  }
+    components: DetailCourse,
+  },
 ];
 export default RoutesList;

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HeaderContainer from "./components/NewHeader/HeaderContainer";
 import RoutesList from "./routes";
 export default function App() {
@@ -18,6 +18,7 @@ export default function App() {
     <Router>
       <div>
         <HeaderContainer />
+        <Link to="/detailCourse/"> CHi tiết khóa học</Link>
         <Switch>{showMenu()}</Switch>
       </div>
     </Router>

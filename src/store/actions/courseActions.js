@@ -1,42 +1,36 @@
-import Axios from "axios";
 import * as constantsAct from "../constants/actionsTypes";
-export const actGetCourseListAPI = courseName => {
-  return dispatch => {
-    Axios({
-      method: "GET",
-      url:
-        "http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01",
-      data: { tenKhoaHoc: courseName }
-    })
-      .then(result => {
+import api from "../../services/api";
+const groupCode = "GP01";
+export const actGetCatalogListAPI = (catalogName) => {
+  const data = { tenDanhMuc: catalogName };
+  return (dispatch) => {
+    api("QuanLyKhoaHoc/LayDanhMucKhoaHoc", "GET", data)
+      .then((result) => {
         dispatch({
-          type: constantsAct.GET_COURSE_LIST,
-          courseList: result.data
+          type: constantsAct.GET_CATALOG_LIST,
+          catalogList: result.data,
         });
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   };
 };
-
-export const actGetCatalogListAPI = catalogName => {
-  return dispatch => {
-    fetch(
-      "http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc",
-      {
-        method: "GET",
-        data: { tenDanhMuc: catalogName }
-      }
+export const actGetCourseListByCatalogAPI = (catalogCode) => {
+  const data = { maDanhMuc: catalogCode };
+  return (dispatch) => {
+    api(
+      `QuanLyKhoaHoc/LayKhoaHocTheoDanhMuc?maDanhMuc=${catalogCode}&MaNhom=${groupCode}`,
+      "GET",
+      data
     )
-      .then(response => response.json())
-      .then(result => {
+      .then((result) => {
         dispatch({
-          type: constantsAct.GET_CATALOG_LIST,
-          catalogList: result
+          type: constantsAct.GET_COURSE_LIST_BY_CATALOG,
+          courseListByCatalog: result.data,
         });
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   };
