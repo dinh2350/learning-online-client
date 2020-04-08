@@ -10,6 +10,7 @@ export default function ListCourse(props) {
     },
     [props.Coursecode]
   );
+
   const showDetailCourse = () => {
     if (props.courseListByCatalog) {
       return (
@@ -18,7 +19,7 @@ export default function ListCourse(props) {
           return (
             <li>
               {" "}
-              <Link to={`/course/${item.maKhoaHoc}`}>
+              <Link to={`/course/${props.Coursecode}/${item.maKhoaHoc}`}>
                 {" "}
                 {item.maKhoaHoc}
               </Link>{" "}

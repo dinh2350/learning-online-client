@@ -18,7 +18,6 @@ export default function App() {
     <Router>
       <div>
         <HeaderContainer />
-        <Link to="/detailCourse/"> CHi tiết khóa học</Link>
         <Switch>{showMenu()}</Switch>
       </div>
     </Router>

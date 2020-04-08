@@ -12,6 +12,9 @@ const courseReducer = (state = initialState, action) => {
     case constantsAct.GET_CATALOG_LIST:
       state.catalogList = action.catalogList;
       break;
+    case constantsAct.GET_INFOR_COURSE:
+      state.inforCourseCode = action.inforCourseCode;
+      break;
     default:
       break;
   }

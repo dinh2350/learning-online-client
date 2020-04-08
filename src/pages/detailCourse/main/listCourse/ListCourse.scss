@@ -24,6 +24,29 @@
           height: 15px;
         }
       }
+      .text {
+        animation: mymove 0.2s linear;
+        ul {
+          list-style: none;
+        }
+      }
     }
+  }
+}
+@media screen and (max-width: 740px) {
+  .ListCourse {
+    padding: 0px 0px;
+  }
+}
+@keyframes mymove {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+    top: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+    top: 100px;
   }
 }

@@ -1,0 +1,38 @@
+.describe-infor-course {
+  margin-top: 30px;
+  .describe-infor-course__wrap {
+    margin: 0px 0px 0px 45px;
+    .describe-infor-course__btn-group {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      padding: 5px 0;
+      .describe-infor-course__btn {
+        cursor: pointer;
+        outline: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-right: 10px;
+        padding: 10px 15px;
+        background-color: white;
+        border: none;
+        border-bottom: 3px solid white;
+
+        &:hover {
+          border-bottom: 3px solid rgba(0, 115, 177, 1);
+        }
+      }
+      .describe-infor-course__btn-choose {
+        border-left: 1px solid rgba(0, 115, 177, 0.6);
+        border-right: 1px solid rgba(0, 115, 177, 0.6);
+        border-bottom: 3px solid rgba(0, 115, 177, 1);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .describe-infor-course {
+    .describe-infor-course__wrap {
+      margin: 0px 20px 0px 20px;
+    }
+  }
+}

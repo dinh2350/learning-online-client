@@ -5,7 +5,7 @@ import TileModuleContainer from "./tileModule/TileModuleContainer";
 import CricleModuleContainer from "./cricleModule/CricleModuleContainer";
 import ListCourseContainer from "./listCourse/LisCourseContainer";
 export default function Home(props) {
-  const [Coursecode, setCoursecode] = useState("BackEnd");
+  const [Coursecode, setCoursecode] = useState("");
   useEffect(function () {
     const { actGetCatalogListAPI } = props;
     actGetCatalogListAPI();
@@ -50,7 +50,6 @@ export default function Home(props) {
   // console.log(catalogList);
   return (
     <div className="home">
-      Page Home
       {getCatalogListCourse()}
       <PillListModuleContainer />
       <TileModuleContainer />

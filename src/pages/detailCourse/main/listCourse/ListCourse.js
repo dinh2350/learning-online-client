@@ -33,7 +33,18 @@ export default function ListCourse() {
             <span>{item.title}</span>
             <img src={imgDownarrow} />
           </div>
-          {item.isShowList && <div>Nguyen Quang Phuoc</div>}
+          {item.isShowList && (
+            <div className="text">
+              <ul>
+                <li>Nguyen Quang Phuoc</li>
+                <li>Nguyen Quang Phuoc</li>
+                <li>Nguyen Quang Phuoc</li>
+                <li>Nguyen Quang Phuoc</li>
+                <li>Nguyen Quang Phuoc</li>
+                <li>Nguyen Quang Phuoc</li>
+              </ul>
+            </div>
+          )}
         </li>
       );
     });

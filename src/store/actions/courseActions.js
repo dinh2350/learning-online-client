@@ -35,3 +35,18 @@ export const actGetCourseListByCatalogAPI = (catalogCode) => {
       });
   };
 };
+export const actGetInforCourse = (CourseCode) => {
+  const data = { maKhoaHoc: CourseCode };
+  return (dispath) => {
+    api(`QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=${CourseCode}`, "GET", data)
+      .then((result) => {
+        dispath({
+          type: constantsAct.GET_INFOR_COURSE,
+          inforCourseCode: result.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+};
