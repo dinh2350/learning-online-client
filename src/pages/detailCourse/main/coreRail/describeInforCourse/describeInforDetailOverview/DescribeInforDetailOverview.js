@@ -1,6 +1,6 @@
 import React from "react";
 import "./DescribeInforDetailOverview.scss";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import RelatedCoursesContainer from "./relatedCourses/RelatedCoursesContainer";
 import imgG from "../../../../../../assets/image/img-header/g.jpg";
 export default function DescribeInforDetailOverview(props) {
@@ -14,12 +14,15 @@ export default function DescribeInforDetailOverview(props) {
             return item.maKhoaHoc == coursecode ? (
               ""
             ) : (
-              <RelatedCoursesContainer
-                img={item.hinhAnh}
-                nameCourse={item.tenKhoaHoc}
-                Teacher={item.nguoiTao.hoTen}
-                Like={item.luotXem}
-              />
+              <Link to={`/${item.maKhoaHoc}`}>
+                {" "}
+                <RelatedCoursesContainer
+                  img={item.hinhAnh}
+                  nameCourse={item.tenKhoaHoc}
+                  Teacher={item.nguoiTao.hoTen}
+                  Like={item.luotXem}
+                />
+              </Link>
             );
           })}
         </div>

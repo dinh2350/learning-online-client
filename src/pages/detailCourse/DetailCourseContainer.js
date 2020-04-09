@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
   return {
-    courseListByCatalog: state.courseReducer.courseListByCatalog,
+    inforCourseCode: state.courseReducer.inforCourseCode,
   };
 };
 

@@ -6,16 +6,24 @@ import MainContainer from "./main/MainContainer";
 import { useParams } from "react-router-dom";
 
 export default function DetailCourse(props) {
-  let { coursecode, coursecatalog } = useParams();
+  let { coursecode } = useParams();
   useEffect(function () {
-    let { actGetInforCourse, actGetCourseListByCatalogAPI } = props;
+    let { actGetInforCourse } = props;
     actGetInforCourse(coursecode);
-    actGetCourseListByCatalogAPI(coursecatalog);
   }, []);
+  const callCourseCatatlog = () => {
+    if (props.inforCourseCode) {
+      return (
+        <MainContainer
+          catalogCode={props.inforCourseCode.danhMucKhoaHoc.maDanhMucKhoahoc}
+        />
+      );
+    }
+  };
   return (
     <div className="detail-course">
       <EnterpriseNavContainer />
-      <MainContainer />
+      {callCourseCatatlog()}
       <div className="price-disclaimer">
         Price may change based on profile and billing country information
         entered during Sign In or Registration

@@ -19,7 +19,7 @@ export default function ListCourse(props) {
           return (
             <li>
               {" "}
-              <Link to={`/course/${props.Coursecode}/${item.maKhoaHoc}`}>
+              <Link to={`/course/${item.maKhoaHoc}`}>
                 {" "}
                 {item.maKhoaHoc}
               </Link>{" "}

@@ -12,14 +12,15 @@ export default function Switch(props) {
     setisSwitchInput(!isSwitchInput);
   };
   //chọn item switcg
-  const onClickChooseItem = item => {
+  const onClickChooseItem = (item) => {
     setnameSwitch(item);
+    setisSwitchInput(!isSwitchInput);
     props.handleClick(item);
   };
   const showItemSwitch = () => {
     return (
-      isSwitchInput && (
-        <div className="contentSwitch">
+      <div className="contentSwitch">
+        <div className="content-switch__wrap">
           <h5>SEARCH FOR</h5>
           <ul>
             {listSwitch.map((item, key) => {
@@ -39,7 +40,7 @@ export default function Switch(props) {
             })}
           </ul>
         </div>
-      )
+      </div>
     );
   };
   return (
