@@ -24,12 +24,12 @@ export default function ListCourse() {
   const showListCourse = () => {
     return listCourse.map((item, key) => {
       return (
-        <li
-          onClick={() => handleClickShow(key, item)}
-          key={key}
-          className="ListCourse__item"
-        >
-          <div className="ListCourse__item__content">
+        <li className="ListCourse__item">
+          <div
+            onClick={() => handleClickShow(key, item)}
+            key={key}
+            className="ListCourse__item__content"
+          >
             <span>{item.title}</span>
             <img src={imgDownarrow} />
           </div>

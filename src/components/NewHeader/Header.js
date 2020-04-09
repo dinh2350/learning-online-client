@@ -3,7 +3,7 @@ import LogoContainer from "./Logo/LogoContainer";
 import "./Header.scss";
 import SearchInputContainer from "./SearchInput/SearchInputContainer";
 import BtnStartContainer from "./BtnStart/BtnStartContainer";
-import BtnSignContainer from "./BtnSign/BtnSignContainer";
+import BtnSignContainer from "./btnSign/BtnSignContainer";
 import InputReponsiveContainer from "./InputReponsive/InputReponsiveContainer";
 export default function Header() {
   return (
