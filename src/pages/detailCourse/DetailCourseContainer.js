@@ -9,9 +9,6 @@ const mapDispatchToProps = (dispatch) => {
     actGetInforCourse: (CourseCode = "Backend_01") => {
       dispatch(actGetInforCourse(CourseCode));
     },
-    actGetCourseListByCatalogAPI: (catalogCode = "") => {
-      dispatch(actGetCourseListByCatalogAPI(catalogCode));
-    },
   };
 };
 
