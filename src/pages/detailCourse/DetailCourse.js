@@ -16,10 +16,12 @@ export default function DetailCourse(props) {
       return (
         <MainContainer
           catalogCode={props.inforCourseCode.danhMucKhoaHoc.maDanhMucKhoahoc}
+          courseCode={coursecode}
         />
       );
     }
   };
+  console.log(coursecode);
   return (
     <div className="detail-course">
       <EnterpriseNavContainer />

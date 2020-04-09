@@ -1,6 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HeaderContainer from "./components/NewHeader/HeaderContainer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import TestAPIContainer from "./components/testAPI/TestAPIContainer";
+import "./assets/styles/Base/Reset.scss";
+import "./App.scss";
 import RoutesList from "./routes";
 export default function App() {
   function showMenu() {
@@ -16,10 +19,13 @@ export default function App() {
   }
   return (
     <Router>
-      <div>
-        <HeaderContainer />
-        <Switch>{showMenu()}</Switch>
-      </div>
+      {/* <TestAPIContainer /> */}
+      <main className="main">
+        <div className="main__wrapper">
+          <HeaderContainer />
+          <Switch>{showMenu()}</Switch>
+        </div>
+      </main>
     </Router>
   );
 }

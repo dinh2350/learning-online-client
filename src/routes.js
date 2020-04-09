@@ -12,10 +12,5 @@ const RoutesList = [
     exact: true,
     components: DetailCourse,
   },
-  {
-    path: "/:coursecode",
-    exact: true,
-    components: DetailCourse,
-  },
 ];
 export default RoutesList;

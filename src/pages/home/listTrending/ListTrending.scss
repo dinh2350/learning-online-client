@@ -1,0 +1,36 @@
+@import "/../../../assets/styles/Helpers/variable.scss";
+.list-trending {
+  .list-trending__wrapper {
+    .list-trending__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: $lth_mb;
+      h2.list-trending__title {
+        font-size: $lth_fs;
+        font-weight: $lt_fw;
+        color: $ltt_c;
+        text-transform: uppercase;
+      }
+      a.list-trending__see-all {
+        font-weight: $lt_fw;
+        color: $ltsa_c;
+        font-size: $lth_fs;
+        vertical-align: baseline;
+        background: transparent;
+        min-width: 5rem;
+        text-align: right;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .list-trending__body {
+      // overflow: hidden;
+      .slick-arrow {
+        &::before {
+          color: black;
+        }
+      }
+    }
+  }
+}
