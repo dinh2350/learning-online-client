@@ -1,0 +1,59 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+.directory {
+  width: $dm_w;
+  height: $dm_h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .directory__wrapper {
+    width: $dw_w;
+    height: $dw_h;
+    .directory__logo {
+      background-image: url(../../../assets/image/background_direc.svg);
+      height: $dl_h;
+      width: $dl_w;
+      align-items: center;
+      float: left;
+    }
+    .directory__lists {
+      width: $dls_w;
+      height: $dls_h;
+
+      display: flex;
+      justify-content: flex-end;
+      .directory__column {
+        width: $dc_w;
+        height: $dc_h;
+        margin-right: $dc_m;
+        .directory__list-item--heading {
+          font-size: 2.1rem;
+          line-height: 1.5;
+          font-weight: 600;
+          color: rgba(0, 0, 0, 0.9);
+          line-height: 20px;
+          margin-bottom: 8px;
+        }
+        ul {
+          list-style: none;
+          li {
+            text-align: left;
+            font-size: 100%;
+            a {
+              font-weight: 600;
+              font-size: 2rem;
+              line-height: 24px;
+              text-decoration: none;
+              background-color: transparent;
+              color: dimgray;
+              &:hover {
+                text-decoration: underline;
+                color: dodgerblue;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
