@@ -27,6 +27,7 @@ const courseReducer = (state = initialState, action) => {
         default:
           break;
       }
+      break;
     case constantsAct.GET_CATALOG_LIST:
       state.catalogList = action.catalogList;
       break;

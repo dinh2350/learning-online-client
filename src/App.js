@@ -19,9 +19,9 @@ export default function App() {
   return (
     <Router>
       {/* <TestAPIContainer /> */}
+      <HeaderContainer />
       <main className="main">
         <div className="main__wrapper">
-          <HeaderContainer />
           <Switch>{showMenu()}</Switch>
         </div>
       </main>

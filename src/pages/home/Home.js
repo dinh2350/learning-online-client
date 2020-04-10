@@ -10,28 +10,69 @@ export default function Home(props) {
     actGetCatalogListAPI();
   }, []);
 
-  const { courseListByBackEnd, courseListByDesign, courseListByDiDong } = props;
+  const {
+    courseListByBackEnd,
+    courseListByDesign,
+    courseListByDiDong,
+    courseListByFrontEnd,
+    courseListByFullStack,
+    courseListByTuDuy,
+  } = props;
 
   return (
-    <div className="home">
-      <ListTrendingContainer
-        courseListByCatalog={courseListByBackEnd}
-        title="backend"
-        catalogCode="BackEnd"
-      />
-      <ListTrendingContainer
-        courseListByCatalog={courseListByDesign}
-        title="design"
-        catalogCode="Design"
-      />
-      <ListTrendingContainer
-        courseListByCatalog={courseListByDiDong}
-        title="design"
-        catalogCode="DiDong"
-      />
-      <PillListModuleContainer />
-      <TileModuleContainer />
-      <CricleModuleContainer />
-    </div>
+    <section className="home">
+      <div className="home__item">
+        <ListTrendingContainer
+          courseListByCatalog={courseListByBackEnd}
+          title="backend"
+          catalogCode="BackEnd"
+        />
+      </div>
+      <div className="home__item">
+        <PillListModuleContainer />
+      </div>
+      <div className="home__item">
+        <ListTrendingContainer
+          courseListByCatalog={courseListByDesign}
+          title="design"
+          catalogCode="Design"
+        />
+      </div>
+      <div className="home__item">
+        <ListTrendingContainer
+          courseListByCatalog={courseListByDiDong}
+          title="design"
+          catalogCode="DiDong"
+        />
+      </div>
+      <div className="home__item">
+        <TileModuleContainer />
+      </div>
+      <div className="home__item">
+        <ListTrendingContainer
+          courseListByCatalog={courseListByFrontEnd}
+          title="Front End"
+          catalogCode="FrontEnd"
+        />
+      </div>
+      <div className="home__item">
+        <ListTrendingContainer
+          courseListByCatalog={courseListByFullStack}
+          title="Full Stack"
+          catalogCode="FullStack"
+        />
+      </div>
+
+      <div className="home__item">
+        <ListTrendingContainer
+          courseListByCatalog={courseListByTuDuy}
+          title="Tu Duy"
+          catalogCode="TuDuy"
+        />
+      </div>
+      <div className="home__item">
+        <CricleModuleContainer />
+      </div>
+    </section>
   );
 }

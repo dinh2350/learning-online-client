@@ -5,6 +5,7 @@
   position: sticky;
   top: 0;
   background-color: white;
+  z-index: 1000;
   .Header__wrap {
     display: flex;
     padding: $hwr_p;
