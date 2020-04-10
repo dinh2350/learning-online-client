@@ -18,10 +18,7 @@ export default function App() {
   }
   return (
     <Router>
-<<<<<<< HEAD
       {/* <TestAPIContainer /> */}
-=======
->>>>>>> dad1b2a0e49c0421152e6f74f8dc68be43084724
       <main className="main">
         <div className="main__wrapper">
           <HeaderContainer />
