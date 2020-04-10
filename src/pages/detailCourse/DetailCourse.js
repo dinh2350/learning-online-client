@@ -7,16 +7,19 @@ import { useParams } from "react-router-dom";
 
 export default function DetailCourse(props) {
   let { coursecode } = useParams();
-  useEffect(function () {
-    let { actGetInforCourse } = props;
-    actGetInforCourse(coursecode);
-  }, []);
+  useEffect(
+    function () {
+      let { actGetInforCourse } = props;
+      actGetInforCourse(coursecode);
+    },
+    [coursecode]
+  );
   const callCourseCatatlog = () => {
     if (props.inforCourseCode) {
       return (
         <MainContainer
           catalogCode={props.inforCourseCode.danhMucKhoaHoc.maDanhMucKhoahoc}
-          courseCode={coursecode}
+          courseCode={props.inforCourseCode.maKhoaHoc}
         />
       );
     }

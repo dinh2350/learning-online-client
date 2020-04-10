@@ -8,7 +8,7 @@ const RoutesList = [
     components: Home,
   },
   {
-    path: "/course/:coursecode",
+    path: "/course/:coursecode/",
     exact: true,
     components: DetailCourse,
   },
