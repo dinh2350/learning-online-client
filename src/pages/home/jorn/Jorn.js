@@ -1,9 +1,9 @@
 import React from "react";
-import "./SectionJorn.scss";
-export default function SectionJorn() {
+import "./Jorn.scss";
+export default function Jorn() {
   return (
-    <div className="SectionJorn">
-      <div className="SectionJorn__wrapper">
+    <div className="jorn">
+      <div className="jorn__wrapper">
         <h2>Join your colleagues, classmates, and friends on LinkedIn.</h2>
         <a href="#">Get Started</a>
       </div>

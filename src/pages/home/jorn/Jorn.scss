@@ -1,12 +1,12 @@
-@import "../../assets/styles/Helpers/variable.scss";
-.SectionJorn {
+@import "../../../assets/styles/Helpers/variable.scss";
+.jorn {
   //   background-color: lime;
   height: 50rem;
   width: $sh_w;
   //   max-width: $msj_w;
 
-  background-image: url(../../assets/image/background_f.svg);
-  .SectionJorn__wrapper {
+  background-image: url(../../../assets/image/background_f.svg);
+  .jorn__wrapper {
     margin-left: 17%;
     h2 {
       font-size: 6.4rem;
@@ -35,6 +35,10 @@
       border-radius: 28px;
       padding: 8px 20px;
       margin-bottom: 12px;
+      &:hover {
+        color: dodgerblue;
+        cursor: pointer;
+      }
     }
   }
 }

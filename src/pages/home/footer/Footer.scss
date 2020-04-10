@@ -1,0 +1,35 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+.footer {
+  background-color: transparent;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  .footer__list {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: flex-start;
+    min-height: 50px;
+    margin: 0 auto;
+    width: $fl_w;
+    .footer__item {
+      font-size: 1.4rem;
+      line-height: 2.33333;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      padding: 8px;
+      position: relative;
+      .footer_item-link {
+        font-size: 1.6rem;
+        line-height: 2;
+        font-weight: 400;
+        &:hover {
+          text-decoration: underline;
+          color: dodgerblue;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

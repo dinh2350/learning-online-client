@@ -1,12 +1,12 @@
-@import "../../assets/styles/Helpers/variable.scss";
-.Section-hero {
+@import "../../../assets/styles/Helpers/variable.scss";
+.hero {
   width: $sh_w;
   height: $sh_h;
-  .Section-hero__wrapper {
+  .hero__wrapper {
     padding: 0 $sh_p;
     height: $sh_h;
     width: 100%;
-    .Section-hero_logo {
+    .hero__logo {
       width: $li_w;
       height: $li_h;
       position: absolute;
@@ -17,12 +17,12 @@
         top: 58%;
       }
     }
-    .Section-hero_FormINF {
-      width: 33%;
+    .hero__inf {
+      width: 40%;
       height: 80%;
       position: absolute;
-      left: 17%;
-      top: 34%;
+      left: 5%;
+      top: 20rem;
       @media screen and(max-width:768px) {
         left: 17%;
         top: 34%;
@@ -30,7 +30,7 @@
         height: 80%;
       }
     }
-    .Section-hero_FormSeach {
+    .hero__seach {
       width: 35%;
       height: 70%;
       position: absolute;

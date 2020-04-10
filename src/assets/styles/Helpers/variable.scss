@@ -8,10 +8,10 @@ $ltt_c: rgba(0, 0, 0, 0.6);
 $ltsa_c: #0073b1;
 
 // Sectionhero
-$sh_h: 90rem;
+$sh_h: 150rem;
 $sh_w: 100%;
 $sh_p: 1rem;
-$li_h: auto;
+$li_h: 100%;
 $li_w: 50%;
 $fi_fs: 6.4rem;
 //SectionJorn
@@ -31,5 +31,20 @@ $breakpoints: (
   "extra-large": 1200px,
   "large": 992px,
   "medium": 768px,
-  "small": 576px
+  "small": 576px,
 );
+// directory
+$dm_h: 28rem;
+$dm_w: 100%;
+$dw_w: 112rem;
+$dw_h: 25rem;
+$dl_h: 2rem;
+$dl_w: 8.4rem;
+$dw_p: 25rem;
+$dls_w: 104rem;
+$dls_h: 27rem;
+$dc_w: 19rem;
+$dc_h: 100%;
+$dc_m: 2.4rem;
+//footer
+$fl_w: 112rem;
