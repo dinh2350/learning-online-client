@@ -1,0 +1,1 @@
+component này chỉ dùng để test các API ko đã viết ở actions .

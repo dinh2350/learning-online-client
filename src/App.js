@@ -1,7 +1,6 @@
 import React from "react";
 import HeaderContainer from "./components/NewHeader/HeaderContainer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import TestAPIContainer from "./components/testAPI/TestAPIContainer";
 import "./assets/styles/Base/Reset.scss";
 import "./App.scss";
 import RoutesList from "./routes";
@@ -19,7 +18,10 @@ export default function App() {
   }
   return (
     <Router>
+<<<<<<< HEAD
       {/* <TestAPIContainer /> */}
+=======
+>>>>>>> dad1b2a0e49c0421152e6f74f8dc68be43084724
       <main className="main">
         <div className="main__wrapper">
           <HeaderContainer />
