@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import TestAPIContainer from "./components/testAPI/TestAPIContainer";
 import "./assets/styles/Base/Reset.scss";
 import "./App.scss";
 import RoutesList from "./routes";
@@ -18,7 +17,6 @@ export default function App() {
   }
   return (
     <Router>
-      <TestAPIContainer />
       <main className="main">
         <div className="main__wrapper">
           <Switch>{showMenu()}</Switch>
