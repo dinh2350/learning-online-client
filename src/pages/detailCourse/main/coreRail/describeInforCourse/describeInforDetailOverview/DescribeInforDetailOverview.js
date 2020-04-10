@@ -14,7 +14,7 @@ export default function DescribeInforDetailOverview(props) {
             return item.maKhoaHoc == coursecode ? (
               ""
             ) : (
-              <Link to={`/${item.maKhoaHoc}`}>
+              <Link to={item.maKhoaHoc}>
                 {" "}
                 <RelatedCoursesContainer
                   img={item.hinhAnh}
