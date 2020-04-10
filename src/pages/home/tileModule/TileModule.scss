@@ -1,6 +1,5 @@
 .TileModule {
   display: flex;
-  padding: 50px;
   .TileModule__item {
     width: 100%;
     img {
@@ -24,7 +23,6 @@
   .TileModule {
     display: flex;
     flex-direction: column;
-    padding: 10px;
     .TileModule__item {
       .TileModule__item__info {
         .TileModule__item__heading {

@@ -21,57 +21,58 @@ export default function Home(props) {
 
   return (
     <section className="home">
-      <div className="home__item">
-        <ListTrendingContainer
-          courseListByCatalog={courseListByBackEnd}
-          title="backend"
-          catalogCode="BackEnd"
-        />
-      </div>
-      <div className="home__item">
-        <PillListModuleContainer />
-      </div>
-      <div className="home__item">
-        <ListTrendingContainer
-          courseListByCatalog={courseListByDesign}
-          title="design"
-          catalogCode="Design"
-        />
-      </div>
-      <div className="home__item">
-        <ListTrendingContainer
-          courseListByCatalog={courseListByDiDong}
-          title="design"
-          catalogCode="DiDong"
-        />
-      </div>
-      <div className="home__item">
-        <TileModuleContainer />
-      </div>
-      <div className="home__item">
-        <ListTrendingContainer
-          courseListByCatalog={courseListByFrontEnd}
-          title="Front End"
-          catalogCode="FrontEnd"
-        />
-      </div>
-      <div className="home__item">
-        <ListTrendingContainer
-          courseListByCatalog={courseListByFullStack}
-          title="Full Stack"
-          catalogCode="FullStack"
-        />
-      </div>
-
-      <div className="home__item">
-        <ListTrendingContainer
-          courseListByCatalog={courseListByTuDuy}
-          title="Tu Duy"
-          catalogCode="TuDuy"
-        />
-      </div>
-      <div className="home__item">
-        <CricleModuleContainer />
+      <div className="home__primary">
+        <div className="home__item">
+          <ListTrendingContainer
+            courseListByCatalog={courseListByBackEnd}
+            title="backend"
+            catalogCode="BackEnd"
+          />
+        </div>
+        <div className="home__item">
+          <PillListModuleContainer />
+        </div>
+        <div className="home__item">
+          <ListTrendingContainer
+            courseListByCatalog={courseListByDesign}
+            title="design"
+            catalogCode="Design"
+          />
+        </div>
+        <div className="home__item">
+          <ListTrendingContainer
+            courseListByCatalog={courseListByDiDong}
+            title="design"
+            catalogCode="DiDong"
+          />
+        </div>
+        <div className="home__item">
+          <TileModuleContainer />
+        </div>
+        <div className="home__item">
+          <ListTrendingContainer
+            courseListByCatalog={courseListByFrontEnd}
+            title="Front End"
+            catalogCode="FrontEnd"
+          />
+        </div>
+        <div className="home__item">
+          <ListTrendingContainer
+            courseListByCatalog={courseListByFullStack}
+            title="Full Stack"
+            catalogCode="FullStack"
+          />
+        </div>
+        <div className="home__item">
+          <ListTrendingContainer
+            courseListByCatalog={courseListByTuDuy}
+            title="Tu Duy"
+            catalogCode="TuDuy"
+          />
+        </div>
+        <div className="home__item">
+          <CricleModuleContainer />
+        </div>
       </div>
     </section>
   );

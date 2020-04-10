@@ -1,12 +1,12 @@
 .CricleModule {
   .CricleModule__wrap {
     display: flex;
-    overflow: hidden;
+
     .CricleModule__content {
       min-width: 50%;
       font-size: 3rem;
 
-      padding: 50px;
+      padding-right: 50px;
       h2 {
         color: #b24020;
         font-weight: 400;

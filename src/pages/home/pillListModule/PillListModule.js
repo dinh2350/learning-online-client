@@ -12,26 +12,26 @@ export default function PillListModule(props) {
       return (
         <>
           <li>
-            <a href="#"> Design Thinking</a>
+            <a href="/"> Design Thinking</a>
           </li>
           <li>
-            <a href="#"> Management Skills</a>
+            <a href="/"> Management Skills</a>
           </li>
           <li>
-            <a href="#"> Data Science Careers</a>
+            <a href="/"> Data Science Careers</a>
           </li>
           <li>
-            <a href="#">Creativity</a>{" "}
+            <a href="/">Creativity</a>{" "}
           </li>
 
           <li>
-            <a href="#">NASBA Continuing Professional Education (CPE)</a>{" "}
+            <a href="/">NASBA Continuing Professional Education (CPE)</a>{" "}
           </li>
           <li>
-            <a href="#">Big Data</a>{" "}
+            <a href="/">Big Data</a>{" "}
           </li>
           <li>
-            <a href="#">Layout and Composition</a>{" "}
+            <a href="/">Layout and Composition</a>{" "}
           </li>
         </>
       );
@@ -53,28 +53,28 @@ export default function PillListModule(props) {
         <h3>POPULAR TOPICS</h3>
         <ul>
           <li>
-            <a href="#">Spreadsheets</a>{" "}
+            <a href="/">Spreadsheets</a>{" "}
           </li>
           <li>
-            <a href="#">Data Analysis</a>{" "}
+            <a href="/">Data Analysis</a>{" "}
           </li>
           <li>
-            <a href="#">Web Development Foundations</a>{" "}
+            <a href="/">Web Development Foundations</a>{" "}
           </li>
           <li>
-            <a href="#"> Project Management Institute (PMI)®</a>{" "}
+            <a href="/"> Project Management Institute (PMI)®</a>{" "}
           </li>
           <li>
-            <a href="#"> Programming Languages</a>{" "}
+            <a href="/"> Programming Languages</a>{" "}
           </li>
           <li>
-            <a href="#"> Web Standards</a>
+            <a href="/"> Web Standards</a>
           </li>
           <li>
-            <a href="#"> Leadership Skills</a>{" "}
+            <a href="/"> Leadership Skills</a>{" "}
           </li>
           <li>
-            <a href="#">Front-End Web Development</a>{" "}
+            <a href="/">Front-End Web Development</a>{" "}
           </li>
           {showMore()}
         </ul>

@@ -4,19 +4,8 @@ import "../../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../../node_modules/slick-carousel/slick/slick-theme.css";
 import CarouselTrending from "react-slick";
 import CourseContainer from "./course/CourseContainer";
-export default function ListTrendingRoot(props) {
-  useEffect(function () {
-    props.actGetCourseListByCatalogAPI(props.catalogCode);
-  }, []);
-  const { courseListByCatalog, title } = props;
-  return (
-    <div>
-      <ListTrending title={title} courseListByCatalog={courseListByCatalog} />
-    </div>
-  );
-}
 
-function ListTrending(props) {
+export default function ListTrending(props) {
   const settings = {
     infinite: false,
     speed: 500,
@@ -52,6 +41,9 @@ function ListTrending(props) {
       },
     ],
   };
+  useEffect(function () {
+    props.actGetCourseListByCatalogAPI(props.catalogCode);
+  }, []);
   const { title, courseListByCatalog } = props;
   function renderCourseList() {
     if (courseListByCatalog) {

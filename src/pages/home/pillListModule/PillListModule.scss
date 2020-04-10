@@ -1,6 +1,5 @@
 .PillListModule {
   display: flex;
-  padding: 10px 85px;
   .PillListModule__cta {
     margin-right: 72px;
     .PillListModule__cta-title {
@@ -60,7 +59,6 @@
   .PillListModule {
     display: flex;
     flex-direction: column;
-    padding: 10px 0px;
     .PillListModule__cta {
       .PillListModule__cta-title {
         font-size: 3.2rem;

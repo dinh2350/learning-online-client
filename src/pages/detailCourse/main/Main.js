@@ -7,12 +7,9 @@ export default function Main(props) {
     function () {
       let { actGetCourseListByCatalogAPI } = props;
       actGetCourseListByCatalogAPI(props.catalogCode);
-      console.log("chay useff");
     },
     [props.courseCode]
   );
-
-  console.log("cscscscsc", props.catalogCode);
   return (
     <div className="main">
       <div className="main__core-rail">

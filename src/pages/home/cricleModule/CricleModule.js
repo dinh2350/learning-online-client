@@ -9,13 +9,13 @@ export default function CricleModule() {
           <h2>Drive business impact</h2>
           <h3>
             Get access to courses for your
-            <a href="#"> business,</a>
-            <a href="#">higher education </a>,or
-            <a href="#"> government </a>
+            <a href="/"> business,</a>
+            <a href="/">higher education </a>,or
+            <a href="/"> government </a>
             team
           </h3>
           <div className="CircleModule__cta">
-            <a href="#">Buy for my team</a>
+            <a href="/">Buy for my team</a>
           </div>
         </div>
         <img src={imgCircle} />

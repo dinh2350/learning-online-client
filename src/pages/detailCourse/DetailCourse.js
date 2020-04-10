@@ -24,7 +24,6 @@ export default function DetailCourse(props) {
       );
     }
   };
-  console.log(coursecode);
   return (
     <div className="detail-course">
       <EnterpriseNavContainer />
