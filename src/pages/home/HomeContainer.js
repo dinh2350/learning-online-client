@@ -12,6 +12,12 @@ const mapDispathToProps = (dispatch) => {
 const mapStateToProps = (state) => {
   return {
     catalogList: state.courseReducer.catalogList,
+    courseListByBackEnd: state.courseReducer.courseListByBackEnd,
+    courseListByDesign: state.courseReducer.courseListByDesign,
+    courseListByDiDong: state.courseReducer.courseListByDiDong,
+    courseListByFrontEnd: state.courseReducer.courseListByFrontEnd,
+    courseListByFullStack: state.courseReducer.courseListByFullStack,
+    courseListByTuDuy: state.courseReducer.courseListByTuDuy,
   };
 };
 export default connect(mapStateToProps, mapDispathToProps)(Home);

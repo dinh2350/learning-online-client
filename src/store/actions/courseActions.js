@@ -17,17 +17,16 @@ export const actGetCatalogListAPI = (catalogName) => {
   };
 };
 export const actGetCourseListByCatalogAPI = (catalogCode) => {
-  const data = { maDanhMuc: catalogCode };
   return (dispatch) => {
     api(
       `QuanLyKhoaHoc/LayKhoaHocTheoDanhMuc?maDanhMuc=${catalogCode}&MaNhom=${groupCode}`,
-      "GET",
-      data
+      "GET"
     )
       .then((result) => {
         dispatch({
           type: constantsAct.GET_COURSE_LIST_BY_CATALOG,
           courseListByCatalog: result.data,
+          catalogCode,
         });
       })
       .catch((err) => {

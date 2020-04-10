@@ -1,6 +1,7 @@
 .CricleModule {
   .CricleModule__wrap {
     display: flex;
+    overflow: hidden;
     .CricleModule__content {
       min-width: 50%;
       font-size: 3rem;
