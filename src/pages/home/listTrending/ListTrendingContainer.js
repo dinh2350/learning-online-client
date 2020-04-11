@@ -1,17 +1,17 @@
 import ListTrending from "./ListTrending";
 import { connect } from "react-redux";
 import { actGetCourseListByCatalogAPI } from "./../../../store/actions/courseActions";
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    courseListByCatalog: state.courseReducer.courseListByCatalog
+    courseListByCatalog: state.courseReducer.courseListByCatalog,
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     actGetCourseListByCatalogAPI: (catalogCode = "TuDuy") => {
       dispatch(actGetCourseListByCatalogAPI(catalogCode));
-    }
+    },
   };
 };
 
