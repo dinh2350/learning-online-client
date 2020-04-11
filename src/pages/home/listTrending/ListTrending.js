@@ -42,10 +42,13 @@ export default function ListTrending(props) {
       },
     ],
   };
+
   useEffect(function () {
     props.actGetCourseListByCatalogAPI(props.catalogCode);
   }, []);
+
   const { title, courseListByCatalog } = props;
+
   function renderCourseList() {
     if (courseListByCatalog) {
       return courseListByCatalog.map((course, index) => {
@@ -53,6 +56,7 @@ export default function ListTrending(props) {
       });
     }
   }
+
   return (
     <section className="list-trending">
       <div className="list-trending__wrapper">
