@@ -3,7 +3,6 @@ import "./Course.scss";
 import { Link } from "react-router-dom";
 export default function Course(props) {
   const { course } = props;
-  console.log(course);
   return (
     <section className="course">
       <div className="course__wrapper">
