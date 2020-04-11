@@ -1,0 +1,23 @@
+.main {
+  display: flex;
+
+  .main__list-course {
+    width: 30%;
+  }
+  .main__core-rail {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 740px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .main__list-course {
+      width: 100%;
+    }
+    .main__core-rail {
+      width: 100%;
+    }
+  }
+}

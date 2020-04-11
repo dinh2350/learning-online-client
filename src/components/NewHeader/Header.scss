@@ -1,0 +1,36 @@
+@import "../../assets/styles/Helpers/variable.scss";
+.Header {
+  box-shadow: $h_bs;
+  margin-bottom: $h_mb;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  .Header__wrap {
+    display: flex;
+    padding: $hwr_p;
+    align-items: center;
+    justify-content: space-between;
+    .buttonGroup {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  .header__inputReponsive {
+    display: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .Header {
+    .Header__wrap {
+      padding: $hhw_p;
+    }
+  }
+}
+@media screen and (max-width: 740px) {
+  .Header {
+    .header__inputReponsive {
+      display: inline;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.describe-info-detail-overview {
+  .describe-info-detail-overview__decriber {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    padding: 25px 0;
+    h2 {
+      margin: 20px 0;
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  .describe-info-detail-overview__intructor {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 25px 0;
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+
+    .describe-info-detail-overview__avatar {
+      display: flex;
+      margin-top: 10px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      p {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-left: 15px;
+      }
+    }
+    .describe-info-detail-overview__content {
+      p {
+        text-align: justify;
+        margin-top: 10px;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  .describe-info-detail-overview__skill-course {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    padding: 25px 0;
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+    button {
+      font-size: 1.6rem;
+      margin-right: 10px;
+      padding: 5px 10px;
+      border-radius: 28px;
+      background-color: white;
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      &:hover {
+        border: 2px solid rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.04);
+        padding: 4px 9px;
+      }
+    }
+  }
+  .describe-info-detail-overview__related {
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin: 25px 0 10px 0;
+    }
+  }
+}

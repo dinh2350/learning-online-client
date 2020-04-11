@@ -1,0 +1,20 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+.Logo {
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    img {
+      width: $lai_w;
+      height: $lai_h;
+      border-radius: $lai_br;
+    }
+    span {
+      color: $las_c;
+      margin-left: $las_ml;
+      font-size: $las_fs;
+      letter-spacing: $las_ls;
+      font-weight: $las_fw;
+    }
+  }
+}

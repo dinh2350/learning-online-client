@@ -1,0 +1,31 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+.BtnStart {
+  button {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    height: $bsb_h;
+    width: $bsb_w;
+    padding: $bsb_p;
+    font-size: $bsb_fs;
+    background-color: white;
+    font-weight: $bsb_fw;
+    color: $bsb_c;
+    margin: 0 0px 0 0px;
+    &:hover {
+      background-color: $bsb_h_bg;
+      border-radius: $bsb_h_br;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .BtnStart {
+    button {
+      height: $bsbm_h;
+      width: $bsbm_w;
+      font-size: $bsbm_fs;
+      margin: 0;
+    }
+  }
+}

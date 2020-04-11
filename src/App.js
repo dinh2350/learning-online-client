@@ -1,6 +1,6 @@
 import React from "react";
+import HeaderContainer from "./components/NewHeader/HeaderContainer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import HeaderContainer from "./components/header/HeaderContainer";
 import "./assets/styles/Base/Reset.scss";
 import "./App.scss";
 import RoutesList from "./routes";
@@ -18,6 +18,7 @@ export default function App() {
   }
   return (
     <Router>
+      {/* <TestAPIContainer /> */}
       <HeaderContainer />
       <main className="main">
         <div className="main__wrapper">

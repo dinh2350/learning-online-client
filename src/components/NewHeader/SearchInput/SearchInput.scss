@@ -1,0 +1,31 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+@import "../../../assets/styles/Base/Reset.scss";
+.SearchInput {
+  width: $s_w;
+  display: flex;
+  margin: 0 32px;
+  .Input__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    button {
+      outline: none;
+      cursor: pointer;
+      padding: $itb_ptb $itb_plr;
+      border: none;
+      background-color: $color-gray-0;
+      border-radius: $itb_br;
+      img {
+        width: $itb_img_w;
+        height: $itb_img_h;
+      }
+    }
+  }
+}
+@media screen and (max-width: 740px) {
+  .SearchInput {
+    display: none;
+  }
+}

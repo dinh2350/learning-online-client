@@ -1,0 +1,84 @@
+.core-rail {
+  .core-rail__wrap {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
+    margin: 35px 0px 0px 45px;
+    padding: 1px;
+    border-radius: 4px;
+    .core-rail__img {
+      display: flex;
+      justify-content: center;
+      img {
+        border-radius: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .core-rail__infor {
+      padding: 10px 20px;
+      .core-rail__infor__header {
+        font-size: 3.2rem;
+        font-weight: 600;
+        margin: 5px 0;
+      }
+      .core-rail__infor__content {
+        font-size: 1.6rem;
+        p {
+          margin: 5px 0;
+        }
+        .core-rail__infor__view {
+          span {
+            margin-right: 10px;
+          }
+          span:nth-child(2) {
+            margin-right: 0px;
+            &::before {
+              content: "\00b7";
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+      .core-rail__group-btn {
+        display: flex;
+        max-width: 450px;
+        justify-content: space-between;
+        margin: 10px 0;
+        .core-rail__group-btn__free {
+          font-size: 1.6rem;
+          font-weight: 600;
+          padding: 10px;
+          background-color: rgba(0, 115, 177, 0.8);
+          color: white;
+          border: none;
+          border-radius: 3px;
+          &:hover {
+            background-color: rgba(0, 115, 177, 1);
+          }
+        }
+        .core-rail__group-btn__buy {
+          font-size: 1.6rem;
+          font-weight: 600;
+          padding: 10px;
+          background-color: rgba(0, 115, 177, 0.01);
+          border: 1px solid rgba(0, 115, 177, 0.9);
+          color: rgba(0, 115, 177, 0.9);
+          border-radius: 3px;
+          &:hover {
+            background-color: rgba(0, 115, 177, 0.1);
+            padding: 9px;
+            border: 2px solid rgba(0, 115, 177, 0.9);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 740px) {
+  .core-rail {
+    .core-rail__wrap {
+      margin: 35px 20px 0px 20px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.bottom-cta {
+  .bottom-cta__wrapper {
+    position: relative;
+    min-height: 840px;
+    &::after {
+      content: "";
+      background-image: url("../../../assets/image/bottom-cta/banner.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100vw;
+      height: 720px;
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: -120px;
+    }
+    h2 {
+      font-size: 6.4rem;
+      line-height: 1.125;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.9);
+      color: #2977c9;
+      font-weight: 200;
+      line-height: 80px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 2rem;
+      line-height: 1.4;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.9);
+      margin-bottom: 15px;
+    }
+    a {
+      display: inline-block;
+      background-color: #2977c9;
+      padding: 8px 20px;
+      outline: none;
+      border: none;
+      margin-right: 10px;
+      font-size: 2.5rem;
+      color: white;
+      border-radius: 28px;
+      &:hover {
+        background-color: #006097;
+      }
+    }
+    a.bottom-cta__buy {
+      border: 1px solid #666;
+      background-color: unset;
+      color: #666;
+      &:hover {
+        background-color: rgba($color: #000000, $alpha: 0.2);
+      }
+    }
+  }
+}

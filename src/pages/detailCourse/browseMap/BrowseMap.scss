@@ -1,0 +1,31 @@
+.browse-map {
+  background-color: #f3f6f8;
+  .browse-map__wrap {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    .browse-map__layout {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      a {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: 500;
+        &:hover {
+          color: #006097;
+          text-decoration: underline;
+        }
+      }
+      a:last-child {
+        color: #006097;
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.PillListModule {
+  display: flex;
+  .PillListModule__cta {
+    margin-right: 72px;
+    .PillListModule__cta-title {
+      font-size: 4.8rem;
+      margin: 0;
+      max-width: 350px;
+      font-weight: 1;
+    }
+    .pill-list-module__cta-subtitle {
+      font-size: 2rem;
+    }
+  }
+  .pill-list-module__list-container {
+    max-width: 719px;
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.4);
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      //justify-content: space-between;
+      padding: 0;
+      li {
+        cursor: pointer;
+        list-style: none;
+        background-color: rgba(0, 0, 0, 0.08);
+        margin: 0px 10px 15px 0;
+        padding: 15px 15px;
+
+        border-radius: 28px;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+        a {
+          text-decoration: none;
+          font-size: 2rem;
+          font-weight: 620;
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+    .showMoreItem {
+      cursor: pointer;
+      font-size: 1.6rem;
+      img {
+        width: 10px;
+        height: 10px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .PillListModule {
+    display: flex;
+    flex-direction: column;
+    .PillListModule__cta {
+      .PillListModule__cta-title {
+        font-size: 3.2rem;
+        font-weight: 450;
+
+        max-width: none;
+      }
+    }
+    .pill-list-module__list-container {
+      ul {
+        li {
+          cursor: pointer;
+
+          padding: 10px 10px;
+
+          a {
+            font-size: 1.6rem;
+            font-weight: 620;
+          }
+        }
+      }
+    }
+  }
+}

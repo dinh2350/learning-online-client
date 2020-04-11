@@ -1,0 +1,29 @@
+.EnterpriseNavs {
+  background-color: #f3f6f8;
+  .EnterpriseNavs__wrap {
+    .EnterpriseNavs__list {
+      padding: 10px 30px;
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      .EnterpriseNavs__item {
+        margin: 0 10px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        a {
+          color: rgba(0, 0, 0, 0.6);
+          &:hover {
+            color: #0073b1;
+            text-decoration: underline;
+          }
+        }
+        &:nth-child(2) {
+          a {
+            color: #544bc2;
+          }
+        }
+      }
+    }
+  }
+}

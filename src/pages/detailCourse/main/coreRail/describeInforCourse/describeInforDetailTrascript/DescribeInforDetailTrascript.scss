@@ -1,0 +1,22 @@
+.describe-infor-detail-trascript {
+  .describe-infor-detail-trascrip__wrap {
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin: 20px 0;
+    }
+    .describe-infor-detail-trascrip__content {
+      display: flex;
+      flex-direction: row;
+      span {
+        font-size: 3rem;
+        text-align: left;
+      }
+      p {
+        font-size: 1.6rem;
+        text-align: justify;
+        line-height: 2;
+      }
+    }
+  }
+}

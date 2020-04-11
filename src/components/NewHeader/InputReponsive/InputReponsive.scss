@@ -1,0 +1,58 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+.InputReponsive {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-left: $ib_ml;
+    border: $ib_b;
+    border-right: none;
+    border-radius: $ib_br;
+    background-color: $ib_bg;
+    height: $ib_h;
+    padding: 5px;
+    img {
+      width: $ibi_h;
+      height: $ibi_w;
+    }
+    .InputReponsive__switch {
+      position: absolute;
+      top: $ibis_t;
+      left: 0;
+      background-color: white;
+      min-width: $ibis_mw;
+      box-shadow: $ibis_bs;
+      border-radius: $ibis_br;
+      .InputReponsive__switch__list {
+        list-style: none;
+        padding: 0px;
+        .InputReponsive__switch__list__item {
+          &:hover {
+            background-color: $ibisli_h_bg;
+          }
+          .InputReponsive__switch__item {
+            text-align: start;
+            margin-left: $ibisi_ml;
+            padding: $ibisli_p;
+            font-size: $ibisli_fs;
+          }
+        }
+      }
+    }
+  }
+  input {
+    width: $ii_w;
+    border: $ii_b;
+    border-left: none;
+    outline: none;
+    border-radius: $ii_br;
+    height: $ii_h;
+    margin-right: $ii_mr;
+  }
+}

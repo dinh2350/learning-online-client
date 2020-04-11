@@ -1,0 +1,38 @@
+@import "../../../assets/styles/Helpers/variable.scss";
+.btn-sign {
+  button {
+    outline: none;
+    cursor: pointer;
+    border: $bb_b;
+    background-color: white;
+    height: $bb_h;
+    width: $bb_w;
+    border-radius: $bb_br;
+    color: $color-blue-0;
+    font-size: $bb_fs;
+    font-weight: $bb_fw;
+    margin-left: $bb_ml;
+    &:hover {
+      background-color: $bb_h_bg;
+      border: $bb_h_b;
+      padding: 1px 1px;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .BtnSign {
+    button {
+      height: $bbm_h;
+      width: $bbm_w;
+      padding: 0px;
+      font-size: $bbm_fs;
+      font-weight: $bbm_fw;
+      margin-left: $bbm_ml;
+      &:hover {
+        background-color: $color-blue-1;
+        border: 2px solid $color-blue-0;
+        padding: 1px 1px;
+      }
+    }
+  }
+}

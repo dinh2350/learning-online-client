@@ -4,12 +4,14 @@ import "../../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../../node_modules/slick-carousel/slick/slick-theme.css";
 import CarouselTrending from "react-slick";
 import CourseContainer from "./course/CourseContainer";
+
 export default function ListTrending(props) {
   const settings = {
     infinite: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -17,8 +19,8 @@ export default function ListTrending(props) {
           infinite: false,
           speed: 500,
           slidesToShow: 3,
-          slidesToScroll: 3
-        }
+          slidesToScroll: 3,
+        },
       },
       {
         breakpoint: 600,
@@ -26,8 +28,8 @@ export default function ListTrending(props) {
           infinite: false,
           speed: 500,
           slidesToShow: 2,
-          slidesToScroll: 2
-        }
+          slidesToScroll: 2,
+        },
       },
       {
         breakpoint: 480,
@@ -35,23 +37,21 @@ export default function ListTrending(props) {
           infinite: false,
           speed: 500,
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
-  const { title } = props;
-  useEffect(
-    function() {
-      const { actGetCourseListByCatalogAPI, catalogCode } = props;
-      actGetCourseListByCatalogAPI(catalogCode);
-    },
-    [props]
-  );
+
+  useEffect(function () {
+    props.actGetCourseListByCatalogAPI(props.catalogCode);
+  }, []);
+
+  const { title, courseListByCatalog } = props;
 
   function renderCourseList() {
-    if (props.courseListByCatalog) {
-      return props.courseListByCatalog.map((course, index) => {
+    if (courseListByCatalog) {
+      return courseListByCatalog.map((course, index) => {
         return <CourseContainer course={course} key={index} />;
       });
     }
