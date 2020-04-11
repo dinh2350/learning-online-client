@@ -11,6 +11,7 @@ export default function ListTrending(props) {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
