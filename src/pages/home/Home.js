@@ -7,6 +7,7 @@ import CricleModuleContainer from "./cricleModule/CricleModuleContainer";
 import HeroContainer from "./hero/HeroContainer";
 import DirectoryContainer from "./directory/DirectoryContainer";
 import FooterContainer from "./footer/FooterContainer";
+import BottomCtaContainer from "./bottomCta/BottomCtaContainer";
 export default function Home(props) {
   useEffect(function () {
     const { actGetCatalogListAPI } = props;
@@ -25,7 +26,9 @@ export default function Home(props) {
   return (
     <section className="home">
       <div className="home__primary">
-        <HeroContainer />
+        <div className="home__item">
+          <HeroContainer />
+        </div>
         <div className="home__item">
           <ListTrendingContainer
             courseListByCatalog={courseListByBackEnd}
@@ -77,7 +80,10 @@ export default function Home(props) {
         <div className="home__item">
           <CricleModuleContainer />
         </div>
-        <DirectoryContainer />
+        <BottomCtaContainer />
+        <div className="home__item">
+          <DirectoryContainer />
+        </div>
       </div>
       <FooterContainer />
     </section>
