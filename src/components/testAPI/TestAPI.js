@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import "./TestAPI.scss";
 export default function Header(props) {
-  useEffect(function() {
+  useEffect(function () {
     props.actGetCourseListByPaginationAPI();
     props.actGetCourseInformationAPI();
     props.actGetStudentInformationOfCourseAPI();
     props.actGetUserTypeListAPI();
     props.actLogInAPI({
-      taiKhoan: "string",
-      matKhau: "string"
+      taiKhoan: "777",
+      matKhau: "789",
     });
     props.actRegisterUserAPI({
       taiKhoan: "string2",
@@ -16,14 +16,14 @@ export default function Header(props) {
       hoTen: "string",
       soDT: "string",
       maNhom: "GP01",
-      email: "string@slon.com.vn"
+      email: "string@slon.com.vn",
     });
     props.actGetUserListAPI("string");
     props.actGetUserListByPaginationAPI();
     props.actGetSearchUserAPI("cao");
     props.actAccountInformationAPI({
       taiKhoan: "string",
-      matKhau: "string"
+      matKhau: "string",
     });
     // props.actAddUserAPI({
     //   taiKhoan: "string11",
@@ -41,7 +41,7 @@ export default function Header(props) {
       soDT: "string",
       maLoaiNguoiDung: "GV",
       maNhom: "GP01",
-      email: "string11@lol.com"
+      email: "string11@lol.com",
     });
     props.actDeleteUserAPI("string11");
     props.actGetUnRegisterCourseListAPI("khai");
@@ -65,7 +65,7 @@ export default function Header(props) {
       maNhom: "GP01",
       ngayTao: "22-2-2020",
       maDanhMucKhoaHoc: "BackEnd",
-      taiKhoanNguoiTao: "abc123"
+      taiKhoanNguoiTao: "abc123",
     });
   }
 
