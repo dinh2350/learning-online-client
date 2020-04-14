@@ -2,6 +2,7 @@ import React from "react";
 import HeaderContainer from "./components/NewHeader/HeaderContainer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./assets/styles/Base/Reset.scss";
+import TestAPIContainer from "./components/testAPI/TestAPIContainer";
 import "./App.scss";
 import RoutesList from "./routes";
 export default function App() {

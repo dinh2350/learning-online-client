@@ -1,3 +1,11 @@
 div.header {
   color: red;
 }
+
+input {
+  &:focus {
+    & ~ label {
+      color: red($color: #000000);
+    }
+  }
+}
