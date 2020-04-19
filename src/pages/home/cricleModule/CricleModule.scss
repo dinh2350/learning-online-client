@@ -1,5 +1,6 @@
 .CricleModule {
   .CricleModule__wrap {
+    overflow: auto;
     display: flex;
     .CricleModule__content {
       min-width: 50%;

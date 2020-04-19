@@ -4,6 +4,12 @@ const initialState = {};
 
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
+    case constantsAct.LOCATION:
+      state.location = action.location;
+    case constantsAct.REGISTER_USER_ERR:
+      state.registerUserErr = action.registerUserErr;
+    case constantsAct.CHECK_LOGIN:
+      state.checkLogin = action.isCheck;
     case constantsAct.GET_USER_TYPE_LIST:
       state.userTypeList = action.userTypeList;
       break;
@@ -12,6 +18,7 @@ const userReducer = (state = initialState, action) => {
       break;
     case constantsAct.REGISTER_USER:
       state.registerUser = action.registerUser;
+      state.registerUserErr = action.registerUserErr;
       break;
     case constantsAct.GET_USER_LIST:
       state.getUserList = action.getUserList;

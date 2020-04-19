@@ -36,10 +36,14 @@ export const actRegisterUserAPI = (user) => {
         dispatch({
           type: constantsAct.REGISTER_USER,
           registerUser: result.data,
+          registerUserErr: "",
         });
       })
       .catch((err) => {
-        console.log(err);
+        dispatch({
+          type: constantsAct.REGISTER_USER_ERR,
+          registerUserErr: err.response.data,
+        });
       });
   };
 };
@@ -314,5 +318,18 @@ export const actGetUserListOfCourseAPI = (courseCode) => {
       .catch((err) => {
         console.log(err.response.data);
       });
+  };
+};
+
+export const actCheckLogin = (isCheck) => {
+  return {
+    type: constantsAct.CHECK_LOGIN,
+    isCheck,
+  };
+};
+export const actLocation = (location) => {
+  return {
+    type: constantsAct.LOCATION,
+    location,
   };
 };

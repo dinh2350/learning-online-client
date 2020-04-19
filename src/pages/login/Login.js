@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "./Login.scss";
 import InputContainer from "./input/InputContainer";
 import imgLock from "../../assets/image/img-header/lock.svg";
+import imgAccount from "../../assets/image/img-header/account.svg";
 export default function Login(props) {
+  let history = useHistory();
   let accountItem = [];
-  if (localStorage.getItem("account")) {
-    accountItem = JSON.parse(localStorage.getItem("account"));
-  }
-
+  let [isSwitch, setisSwitch] = useState(false);
+  let [isChoose, setisChoose] = useState(false);
+  let [isRemember, setisRemember] = useState(false);
   let [isFocuse, setIsFocus] = useState(() => {
     if (localStorage.getItem("account")) {
       return {
@@ -21,7 +23,6 @@ export default function Login(props) {
       };
     }
   });
-
   let [user, setuser] = useState(() => {
     if (localStorage.getItem("account")) {
       return {
@@ -35,6 +36,9 @@ export default function Login(props) {
       };
     }
   });
+  if (localStorage.getItem("account")) {
+    accountItem = JSON.parse(localStorage.getItem("account"));
+  }
   const handleChange = (event) => {
     setuser({ ...user, [event.target.name]: event.target.value });
   };
@@ -45,44 +49,96 @@ export default function Login(props) {
         [event.target.name]: !isFocuse[event.target.name],
       });
     }
+    if ((event.target.name == "taiKhoan") & (isChoose == false)) {
+      setisSwitch(!isSwitch);
+    }
   };
   const handleLogin = () => {
-    console.log(user);
     props.actLogInAPI(user);
-    accountItem.unshift({
-      name: user.taiKhoan,
-      pass: user.matKhau,
-    });
-    localStorage.setItem("account", JSON.stringify(accountItem));
-    console.log(accountItem);
-  };
-  const showinforuse = () => {
-    if (props.user) {
-      console.log("thông tin người dùng", props.user);
+    if (isRemember) {
+      accountItem = accountItem.filter((item) => {
+        return item.name != user.taiKhoan;
+      });
+      accountItem.unshift({
+        name: user.taiKhoan,
+        pass: user.matKhau,
+        dangNhap: true,
+      });
+      localStorage.setItem("account", JSON.stringify(accountItem));
+    }
+    props.actCheckLogin(true);
+    if (props.location) {
+      history.push("/");
+    } else {
+      history.goBack();
     }
   };
 
+  const handleClickSwitch = (item) => {
+    setisSwitch(false);
+    setisChoose(false);
+    setuser({
+      taiKhoan: item.name,
+      matKhau: item.pass,
+    });
+  };
+  const handleMouseOVer = (item) => {
+    setuser({
+      taiKhoan: item.name,
+      matKhau: item.pass,
+    });
+    setisChoose(true);
+  };
+  const handleMouseOut = () => {
+    setuser({
+      taiKhoan: JSON.parse(localStorage.getItem("account"))[0].name,
+      matKhau: JSON.parse(localStorage.getItem("account"))[0].pass,
+    });
+    setisChoose(false);
+  };
   const showSelectAccount = () => {
     return (
-      <ul>
-        {accountItem.map((item, index) => {
-          return <li key={index}></li>;
-        })}
-      </ul>
+      isSwitch && (
+        <ul className="login__group-input__switch-account">
+          {accountItem.map((item, index) => {
+            return (
+              <li
+                onMouseOut={handleMouseOut}
+                onMouseOver={() => handleMouseOVer(item)}
+                onClick={() => handleClickSwitch(item)}
+                key={index}
+                className="login__group-input__switch-account__item"
+              >
+                {" "}
+                <img src={imgAccount} />
+                <div className="login__group-input__switch-account__item__content">
+                  <input type="email" value={item.name} disabled />
+                  <input type="password" value={item.pass} disabled />
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      )
     );
+  };
+
+  const handleClickRemember = (event) => {
+    setisRemember(!isRemember);
   };
   return (
     <div for="label-email_1" className="login">
-      {showinforuse()}
       <div className="login__wrap">
         <img src={imgLock} />
         <h2>Sign</h2>
+
         <form className="login__group-input">
           {showSelectAccount()}
           <InputContainer
             name="taiKhoan"
             id="taiKhoan"
             type="email"
+            autoComplete="off"
             value={user.taiKhoan}
             onFocus={handleFocus}
             onBlur={handleFocus}
@@ -94,17 +150,19 @@ export default function Login(props) {
             name="matKhau"
             id="matKhau"
             type="password"
+            autoComplete="off"
             value={user.matKhau}
             onFocus={handleFocus}
             onBlur={handleFocus}
             onChange={handleChange}
-            placeholder="matKhau"
+            placeholder="Password"
             isClick={isFocuse.matKhau}
           />
           <input
             type="checkbox"
             id="check-remember"
             className="login__group-input__checkbox"
+            onClick={handleClickRemember}
           />
           <label for="check-remember" className="login__checkbox-remember">
             <div className="login__group-input__checkbox-label"></div>

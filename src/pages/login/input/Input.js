@@ -11,6 +11,7 @@ export default function Input(props) {
     isClick,
     onChange,
     value,
+    autoComplete,
   } = props;
   return (
     <div
@@ -27,6 +28,7 @@ export default function Input(props) {
         onFocus={onFocus}
         onBlur={onBlur}
         onChange={onChange}
+        autocomplete={autoComplete}
         placeholder
       />
 
