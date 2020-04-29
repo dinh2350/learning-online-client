@@ -23,6 +23,19 @@ export default function Home(props) {
     courseListByTuDuy,
   } = props;
 
+  const showList = () => {
+    if (props.catalogList) {
+      return (
+        <>
+          <ListTrendingContainer
+            title="Trending Data Analysis Courses See all"
+            catalogCode={"BackEnd"}
+          />
+        </>
+      );
+    }
+  };
+
   return (
     <section className="home">
       <div className="home__primary">
@@ -88,4 +101,14 @@ export default function Home(props) {
       <FooterContainer />
     </section>
   );
+  // return (
+  //   <div className="home">
+  //     {/* {getCatalogListCourse()} */}
+
+  //     {showList()}
+  //     <PillListModuleContainer />
+  //     <TileModuleContainer />
+  //     <CricleModuleContainer />
+  //   </div>
+  // );
 }

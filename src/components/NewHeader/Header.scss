@@ -4,6 +4,7 @@
   margin-bottom: $h_mb;
   position: sticky;
   top: 0;
+  z-index: 1000;
   background-color: white;
   z-index: 1000;
   .Header__wrap {
@@ -14,6 +15,7 @@
     .buttonGroup {
       display: flex;
       justify-content: space-around;
+      align-items: center;
     }
   }
   .header__inputReponsive {
